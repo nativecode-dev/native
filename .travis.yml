@@ -5,7 +5,7 @@ node_js:
   - '8'
 os: linux
 stages:
-  - build
+  - test
   - name: deploy
     if: (branch = "master" OR branch = "master-lts") AND type != pull_request AND tag IS blank
 jobs:
