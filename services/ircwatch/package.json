@@ -4,6 +4,7 @@
   "main": "bin/CLI.js",
   "author": "opensource@nativecode.com",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "start": "ts-node src/CLI.ts",

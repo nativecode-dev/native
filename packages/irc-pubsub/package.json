@@ -8,6 +8,9 @@
   "scripts": {
     "build": "tsc --project tsconfig.json"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@nofrills/lincoln": "^2.0.0",
     "@nofrills/lincoln-debug": "^2.0.0",
