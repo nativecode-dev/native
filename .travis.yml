@@ -10,13 +10,13 @@ stages:
     if: (branch = "master" OR branch = "master-lts") AND type != pull_request AND tag IS blank
 jobs:
   include:
-  - stage: deploy
-    script:
-    - yarn run travis-ssh
-    - git remote set-url origin git@github.com:nativecode-dev/native.git
-    - git checkout $TRAVIS_BRANCH
-    - npm set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-    - yarn run push
+    - stage: deploy
+      script:
+        - yarn run travis-ssh
+        - git remote set-url origin git@github.com:nativecode-dev/native.git
+        - git checkout $TRAVIS_BRANCH
+        - npm set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
+        - yarn run push
 after_failure:
   - cat lerna-debug.log
 before_install:
