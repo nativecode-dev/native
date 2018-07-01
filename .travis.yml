@@ -5,8 +5,7 @@ node_js:
 os: linux
 stages:
 - name: deploy
-  if: (branch = "master" OR branch = "master-lts") AND type != pull_request AND tag
-    IS blank
+  if: (branch = "master" OR branch = "master-lts") AND type != pull_request AND tag IS blank
 jobs:
   include:
   - stage: deploy
