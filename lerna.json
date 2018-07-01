@@ -28,5 +28,6 @@
     "packages/*",
     "services/*"
   ],
+  "sort": true,
   "version": "0.0.0"
 }
