@@ -1,5 +1,5 @@
 {
-  "name": "@nativecode/imdb",
+  "name": "@nativecode/ircwatch",
   "version": "1.0.0",
   "main": "index.js",
   "author": "opensource@nativecode.com",
@@ -9,13 +9,15 @@
     "start": "ts-node src/CLI.ts"
   },
   "dependencies": {
-    "gunzip-maybe": "^1.4.1",
-    "rxjs": "^6.2.1",
-    "tar": "^4.4.4"
+    "@nofrills/lincoln": "^2.0.0",
+    "@nofrills/lincoln-debug": "^2.0.0",
+    "amqp-ts": "^1.4.0",
+    "irc-colors": "^1.4.2",
+    "ircv3": "^0.8.6",
+    "rxjs": "^6.2.1"
   },
   "devDependencies": {
     "@types/node": "^10.3.4",
-    "@types/tar": "^4.0.0",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
     "typescript": "^2.9.2"

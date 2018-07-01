@@ -9,5 +9,13 @@
     "interfaces/*",
     "packages/*",
     "services/*"
-  ]
+  ],
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  },
+  "scripts": {
+    "build": "lerna bootstrap ; lerna run build",
+    "prebuild": "yarn",
+    "start": "lerna run start"
+  }
 }
