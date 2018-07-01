@@ -220,51 +220,6 @@
     semver "^5.3.0"
     semver-intersect "^1.1.2"
 
-"@types/body-parser@*":
-  version "1.17.0"
-  resolved "https://packages.nativecode.com/repository/npm/@types/body-parser/-/body-parser-1.17.0.tgz#9f5c9d9bd04bb54be32d5eb9fc0d8c974e6cf58c"
-  dependencies:
-    "@types/connect" "*"
-    "@types/node" "*"
-
-"@types/body-parser@0.0.33":
-  version "0.0.33"
-  resolved "https://packages.nativecode.com/repository/npm/@types/body-parser/-/body-parser-0.0.33.tgz#33ca1498fc37e51c5df0c81cae34569e7041e025"
-  dependencies:
-    "@types/express" "*"
-
-"@types/connect@*":
-  version "3.4.32"
-  resolved "https://packages.nativecode.com/repository/npm/@types/connect/-/connect-3.4.32.tgz#aa0e9616b9435ccad02bc52b5b454ffc2c70ba28"
-  dependencies:
-    "@types/node" "*"
-
-"@types/cookie-parser@^1.3.30":
-  version "1.4.1"
-  resolved "https://packages.nativecode.com/repository/npm/@types/cookie-parser/-/cookie-parser-1.4.1.tgz#e88a39c41960f31549b4c52dd8620aa4a2feb4bb"
-  dependencies:
-    "@types/express" "*"
-
-"@types/events@*":
-  version "1.2.0"
-  resolved "https://packages.nativecode.com/repository/npm/@types/events/-/events-1.2.0.tgz#81a6731ce4df43619e5c8c945383b3e62a89ea86"
-
-"@types/express-serve-static-core@*", "@types/express-serve-static-core@^4.16.0":
-  version "4.16.0"
-  resolved "https://packages.nativecode.com/repository/npm/@types/express-serve-static-core/-/express-serve-static-core-4.16.0.tgz#fdfe777594ddc1fe8eb8eccce52e261b496e43e7"
-  dependencies:
-    "@types/events" "*"
-    "@types/node" "*"
-    "@types/range-parser" "*"
-
-"@types/express@*", "@types/express@^4.16.0":
-  version "4.16.0"
-  resolved "https://packages.nativecode.com/repository/npm/@types/express/-/express-4.16.0.tgz#6d8bc42ccaa6f35cf29a2b7c3333cb47b5a32a19"
-  dependencies:
-    "@types/body-parser" "*"
-    "@types/express-serve-static-core" "*"
-    "@types/serve-static" "*"
-
 "@types/jasmine@*", "@types/jasmine@~2.8.6":
   version "2.8.8"
   resolved "https://packages.nativecode.com/repository/npm/@types/jasmine/-/jasmine-2.8.8.tgz#bf53a7d193ea8b03867a38bfdb4fbb0e0bf066c9"
@@ -274,16 +229,6 @@
   resolved "https://packages.nativecode.com/repository/npm/@types/jasminewd2/-/jasminewd2-2.0.3.tgz#0d2886b0cbdae4c0eeba55e30792f584bf040a95"
   dependencies:
     "@types/jasmine" "*"
-
-"@types/mime@*":
-  version "2.0.0"
-  resolved "https://packages.nativecode.com/repository/npm/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
-
-"@types/multer@0.0.32":
-  version "0.0.32"
-  resolved "https://packages.nativecode.com/repository/npm/@types/multer/-/multer-0.0.32.tgz#f89c751227dc20b7c933c309a3e7467c499fcdec"
-  dependencies:
-    "@types/express" "*"
 
 "@types/node@*", "@types/node@^10.3.4":
   version "10.3.4"
@@ -301,20 +246,9 @@
   version "0.0.32"
   resolved "https://packages.nativecode.com/repository/npm/@types/q/-/q-0.0.32.tgz#bd284e57c84f1325da702babfc82a5328190c0c5"
 
-"@types/range-parser@*":
-  version "1.2.2"
-  resolved "https://packages.nativecode.com/repository/npm/@types/range-parser/-/range-parser-1.2.2.tgz#fa8e1ad1d474688a757140c91de6dace6f4abc8d"
-
 "@types/selenium-webdriver@^2.53.35", "@types/selenium-webdriver@~2.53.39":
   version "2.53.43"
   resolved "https://packages.nativecode.com/repository/npm/@types/selenium-webdriver/-/selenium-webdriver-2.53.43.tgz#2de3d718819bc20165754c4a59afb7e9833f6707"
-
-"@types/serve-static@*", "@types/serve-static@^1.13.2":
-  version "1.13.2"
-  resolved "https://packages.nativecode.com/repository/npm/@types/serve-static/-/serve-static-1.13.2.tgz#f5ac4d7a6420a99a6a45af4719f4dcd8cd907a48"
-  dependencies:
-    "@types/express-serve-static-core" "*"
-    "@types/mime" "*"
 
 "@types/tar@^4.0.0":
   version "4.0.0"
@@ -609,10 +543,6 @@ anymatch@^2.0.0:
 app-root-path@^2.0.1:
   version "2.0.1"
   resolved "https://packages.nativecode.com/repository/npm/app-root-path/-/app-root-path-2.0.1.tgz#cd62dcf8e4fd5a417efc664d2e5b10653c651b46"
-
-append-field@^0.1.0:
-  version "0.1.0"
-  resolved "https://packages.nativecode.com/repository/npm/append-field/-/append-field-0.1.0.tgz#6ddc58fa083c7bc545d3c5995b2830cc2366d44a"
 
 append-transform@^1.0.0:
   version "1.0.0"
@@ -975,7 +905,7 @@ body-parser@1.18.2:
     raw-body "2.3.2"
     type-is "~1.6.15"
 
-body-parser@^1.16.1, body-parser@^1.18.3:
+body-parser@^1.16.1:
   version "1.18.3"
   resolved "https://packages.nativecode.com/repository/npm/body-parser/-/body-parser-1.18.3.tgz#5b292198ffdd553b3a0f20ded0592b956955c8b4"
   dependencies:
@@ -1152,13 +1082,6 @@ builtins@^1.0.3:
   version "1.0.3"
   resolved "https://packages.nativecode.com/repository/npm/builtins/-/builtins-1.0.3.tgz#cb94faeb61c8696451db36534e1422f94f0aee88"
 
-busboy@^0.2.11:
-  version "0.2.14"
-  resolved "https://packages.nativecode.com/repository/npm/busboy/-/busboy-0.2.14.tgz#6c2a622efcf47c57bbbe1e2a9c37ad36c7925453"
-  dependencies:
-    dicer "0.2.5"
-    readable-stream "1.1.x"
-
 byline@^5.0.0:
   version "5.0.0"
   resolved "https://packages.nativecode.com/repository/npm/byline/-/byline-5.0.0.tgz#741c5216468eadc457b03410118ad77de8c1ddb1"
@@ -1211,10 +1134,6 @@ cache-loader@^1.2.2:
 callsite@1.0.0:
   version "1.0.0"
   resolved "https://packages.nativecode.com/repository/npm/callsite/-/callsite-1.0.0.tgz#280398e5d664bd74038b6f0905153e6e8af1bc20"
-
-callsites@^1.0.0:
-  version "1.0.1"
-  resolved "https://packages.nativecode.com/repository/npm/callsites/-/callsites-1.0.1.tgz#c14c24188ce8e1d6a030b4c3c942e6ba895b6a1a"
 
 camel-case@3.0.x:
   version "3.0.0"
@@ -1771,13 +1690,6 @@ convert-source-map@^1.5.0:
   version "1.5.1"
   resolved "https://packages.nativecode.com/repository/npm/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
 
-cookie-parser@^1.4.3:
-  version "1.4.3"
-  resolved "https://packages.nativecode.com/repository/npm/cookie-parser/-/cookie-parser-1.4.3.tgz#0fe31fa19d000b95f4aadf1f53fdc2b8a203baa5"
-  dependencies:
-    cookie "0.3.1"
-    cookie-signature "1.0.6"
-
 cookie-signature@1.0.6:
   version "1.0.6"
   resolved "https://packages.nativecode.com/repository/npm/cookie-signature/-/cookie-signature-1.0.6.tgz#e303a882b342cc3ee8ca513a79999734dab3ae2c"
@@ -1825,13 +1737,6 @@ core-js@~2.3.0:
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://packages.nativecode.com/repository/npm/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
-
-cors@^2.8.4:
-  version "2.8.4"
-  resolved "https://packages.nativecode.com/repository/npm/cors/-/cors-2.8.4.tgz#2bd381f2eb201020105cd50ea59da63090694686"
-  dependencies:
-    object-assign "^4"
-    vary "^1"
 
 cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
   version "2.2.2"
@@ -2163,13 +2068,6 @@ detect-node@^2.0.3:
 di@^0.0.1:
   version "0.0.1"
   resolved "https://packages.nativecode.com/repository/npm/di/-/di-0.0.1.tgz#806649326ceaa7caa3306d75d985ea2748ba913c"
-
-dicer@0.2.5:
-  version "0.2.5"
-  resolved "https://packages.nativecode.com/repository/npm/dicer/-/dicer-0.2.5.tgz#5996c086bb33218c812c090bddc09cd12facb70f"
-  dependencies:
-    readable-stream "1.1.x"
-    streamsearch "0.1.2"
 
 diff@^3.1.0, diff@^3.2.0:
   version "3.5.0"
@@ -2599,7 +2497,7 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
-express@^4.16.2, express@^4.16.3:
+express@^4.16.2:
   version "4.16.3"
   resolved "https://packages.nativecode.com/repository/npm/express/-/express-4.16.3.tgz#6af8a502350db3246ecc4becf6b5a34d22f7ed53"
   dependencies:
@@ -2894,13 +2792,6 @@ fs-access@^1.0.0:
   dependencies:
     null-check "^1.0.0"
 
-fs-extra@^2.1.2:
-  version "2.1.2"
-  resolved "https://packages.nativecode.com/repository/npm/fs-extra/-/fs-extra-2.1.2.tgz#046c70163cef9aad46b0e4a7fa467fb22d71de35"
-  dependencies:
-    graceful-fs "^4.1.2"
-    jsonfile "^2.1.0"
-
 fs-extra@^4.0.1:
   version "4.0.3"
   resolved "https://packages.nativecode.com/repository/npm/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
@@ -3056,7 +2947,7 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
-glob-parent@^3.0.0, glob-parent@^3.1.0:
+glob-parent@^3.1.0:
   version "3.1.0"
   resolved "https://packages.nativecode.com/repository/npm/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"
   dependencies:
@@ -3120,7 +3011,7 @@ globby@^5.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-globby@^6.0.0, globby@^6.1.0:
+globby@^6.1.0:
   version "6.1.0"
   resolved "https://packages.nativecode.com/repository/npm/globby/-/globby-6.1.0.tgz#f5a6d70e8395e21c858fb0489d64df02424d506c"
   dependencies:
@@ -4088,12 +3979,6 @@ json5@^0.5.0:
   version "0.5.1"
   resolved "https://packages.nativecode.com/repository/npm/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
-jsonfile@^2.1.0:
-  version "2.4.0"
-  resolved "https://packages.nativecode.com/repository/npm/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
-  optionalDependencies:
-    graceful-fs "^4.1.6"
-
 jsonfile@^4.0.0:
   version "4.0.0"
   resolved "https://packages.nativecode.com/repository/npm/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
@@ -4765,19 +4650,6 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://packages.nativecode.com/repository/npm/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
-multer@^1.3.0:
-  version "1.3.0"
-  resolved "https://packages.nativecode.com/repository/npm/multer/-/multer-1.3.0.tgz#092b2670f6846fa4914965efc8cf94c20fec6cd2"
-  dependencies:
-    append-field "^0.1.0"
-    busboy "^0.2.11"
-    concat-stream "^1.5.0"
-    mkdirp "^0.5.1"
-    object-assign "^3.0.0"
-    on-finished "^2.3.0"
-    type-is "^1.6.4"
-    xtend "^4.0.0"
-
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
   resolved "https://packages.nativecode.com/repository/npm/multicast-dns-service-types/-/multicast-dns-service-types-1.1.0.tgz#899f11d9686e5e05cb91b35d5f0e63b773cfc901"
@@ -5039,11 +4911,7 @@ object-assign@4.1.0:
   version "4.1.0"
   resolved "https://packages.nativecode.com/repository/npm/object-assign/-/object-assign-4.1.0.tgz#7a3b3d0e98063d43f4c03f2e8ae6cd51a86883a0"
 
-object-assign@^3.0.0:
-  version "3.0.0"
-  resolved "https://packages.nativecode.com/repository/npm/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
-
-object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.0:
+object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.1"
   resolved "https://packages.nativecode.com/repository/npm/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -5102,7 +4970,7 @@ obuf@^1.0.0, obuf@^1.1.1:
   version "1.1.2"
   resolved "https://packages.nativecode.com/repository/npm/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
 
-on-finished@^2.3.0, on-finished@~2.3.0:
+on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://packages.nativecode.com/repository/npm/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
   dependencies:
@@ -5246,12 +5114,6 @@ param-case@2.1.x:
   dependencies:
     no-case "^2.2.0"
 
-parent-module@^0.1.0:
-  version "0.1.0"
-  resolved "https://packages.nativecode.com/repository/npm/parent-module/-/parent-module-0.1.0.tgz#b5292863a1e8c476ecf857e7d75c98920b24b8a6"
-  dependencies:
-    callsites "^1.0.0"
-
 parse-asn1@^5.0.0:
   version "5.1.1"
   resolved "https://packages.nativecode.com/repository/npm/parse-asn1/-/parse-asn1-5.1.1.tgz#f6bf293818332bd0dab54efb16087724745e6ca8"
@@ -5375,13 +5237,6 @@ path-type@^3.0.0:
   resolved "https://packages.nativecode.com/repository/npm/path-type/-/path-type-3.0.0.tgz#cef31dc8e0a1a3bb0d105c0cd97cf3bf47f4e36f"
   dependencies:
     pify "^3.0.0"
-
-path@^0.12.7:
-  version "0.12.7"
-  resolved "https://packages.nativecode.com/repository/npm/path/-/path-0.12.7.tgz#d4dc2a506c4ce2197eb481ebfcd5b36c0140b10f"
-  dependencies:
-    process "^0.11.1"
-    util "^0.10.3"
 
 pbkdf2@^3.0.3:
   version "3.0.16"
@@ -5535,7 +5390,7 @@ process-nextick-args@~2.0.0:
   version "2.0.0"
   resolved "https://packages.nativecode.com/repository/npm/process-nextick-args/-/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
 
-process@^0.11.1, process@^0.11.10:
+process@^0.11.10:
   version "0.11.10"
   resolved "https://packages.nativecode.com/repository/npm/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
 
@@ -5805,7 +5660,7 @@ readable-stream@1.0, readable-stream@~1.0.2:
     isarray "0.0.1"
     string_decoder "~0.10.x"
 
-readable-stream@1.1.x, "readable-stream@1.x >=1.1.9":
+"readable-stream@1.x >=1.1.9":
   version "1.1.14"
   resolved "https://packages.nativecode.com/repository/npm/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
@@ -5848,7 +5703,7 @@ redent@^2.0.0:
     indent-string "^3.0.0"
     strip-indent "^2.0.0"
 
-reflect-metadata@^0.1.10, reflect-metadata@^0.1.2:
+reflect-metadata@^0.1.2:
   version "0.1.12"
   resolved "https://packages.nativecode.com/repository/npm/reflect-metadata/-/reflect-metadata-0.1.12.tgz#311bf0c6b63cd782f228a81abe146a2bfa9c56f2"
 
@@ -6024,14 +5879,6 @@ require-directory@^2.1.1:
 require-from-string@^1.1.0:
   version "1.2.1"
   resolved "https://packages.nativecode.com/repository/npm/require-from-string/-/require-from-string-1.2.1.tgz#529c9ccef27380adfec9a2f965b649bbee636418"
-
-require-glob@^3.2.0:
-  version "3.2.0"
-  resolved "https://packages.nativecode.com/repository/npm/require-glob/-/require-glob-3.2.0.tgz#90bfe2c8efb4b9f972eb9a3f5e580832e04f64d3"
-  dependencies:
-    glob-parent "^3.0.0"
-    globby "^6.0.0"
-    parent-module "^0.1.0"
 
 require-main-filename@^1.0.1:
   version "1.0.1"
@@ -6696,10 +6543,6 @@ stream-shift@^1.0.0:
   version "1.0.0"
   resolved "https://packages.nativecode.com/repository/npm/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
 
-streamsearch@0.1.2:
-  version "0.1.2"
-  resolved "https://packages.nativecode.com/repository/npm/streamsearch/-/streamsearch-0.1.2.tgz#808b9d0e56fc273d809ba57338e929919a1a9f1a"
-
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"
   resolved "https://packages.nativecode.com/repository/npm/string-width/-/string-width-1.0.2.tgz#118bdf5b8cdc51a2a7e70d211e07e2b0b9b107d3"
@@ -6826,10 +6669,6 @@ supports-color@^5.1.0, supports-color@^5.3.0, supports-color@^5.4.0:
   resolved "https://packages.nativecode.com/repository/npm/supports-color/-/supports-color-5.4.0.tgz#1c6b337402c2137605efe19f10fec390f6faab54"
   dependencies:
     has-flag "^3.0.0"
-
-swagger-ui-express@^2.0.15:
-  version "2.0.15"
-  resolved "https://packages.nativecode.com/repository/npm/swagger-ui-express/-/swagger-ui-express-2.0.15.tgz#fba85a357b40c0d629e942537199987b8085587d"
 
 symbol-observable@^1.2.0:
   version "1.2.0"
@@ -6976,6 +6815,10 @@ tough-cookie@~2.3.0, tough-cookie@~2.3.3:
   dependencies:
     punycode "^1.4.1"
 
+travis@^0.1.1:
+  version "0.1.1"
+  resolved "https://packages.nativecode.com/repository/npm/travis/-/travis-0.1.1.tgz#80fe1c36f6f3b739fce07e6063838ce436357d60"
+
 tree-kill@^1.0.0, tree-kill@^1.2.0:
   version "1.2.0"
   resolved "https://packages.nativecode.com/repository/npm/tree-kill/-/tree-kill-1.2.0.tgz#5846786237b4239014f05db156b643212d4c6f36"
@@ -7105,7 +6948,7 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-type-is@^1.6.4, type-is@~1.6.15, type-is@~1.6.16:
+type-is@~1.6.15, type-is@~1.6.16:
   version "1.6.16"
   resolved "https://packages.nativecode.com/repository/npm/type-is/-/type-is-1.6.16.tgz#f89ce341541c672b25ee7ae3c73dee3b2be50194"
   dependencies:
@@ -7115,29 +6958,6 @@ type-is@^1.6.4, type-is@~1.6.15, type-is@~1.6.16:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://packages.nativecode.com/repository/npm/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
-
-typescript-rest@^1.6.1:
-  version "1.6.1"
-  resolved "https://packages.nativecode.com/repository/npm/typescript-rest/-/typescript-rest-1.6.1.tgz#65cf95521deb61ab38174f1a46eb53c0208dcdc1"
-  dependencies:
-    "@types/body-parser" "0.0.33"
-    "@types/cookie-parser" "^1.3.30"
-    "@types/express" "^4.16.0"
-    "@types/express-serve-static-core" "^4.16.0"
-    "@types/multer" "0.0.32"
-    "@types/serve-static" "^1.13.2"
-    body-parser "^1.18.3"
-    cookie-parser "^1.4.3"
-    cors "^2.8.4"
-    express "^4.16.3"
-    fs-extra "^2.1.2"
-    lodash "^4.17.10"
-    multer "^1.3.0"
-    path "^0.12.7"
-    reflect-metadata "^0.1.10"
-    require-glob "^3.2.0"
-    swagger-ui-express "^2.0.15"
-    yamljs "^0.2.10"
 
 "typescript@>=2.6.2 <2.8", typescript@~2.7.2:
   version "2.7.2"
@@ -7370,7 +7190,7 @@ validate-npm-package-name@^3.0.0:
   dependencies:
     builtins "^1.0.3"
 
-vary@^1, vary@~1.1.2:
+vary@~1.1.2:
   version "1.1.2"
   resolved "https://packages.nativecode.com/repository/npm/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
 
@@ -7738,13 +7558,6 @@ yallist@^2.1.2:
 yallist@^3.0.0, yallist@^3.0.2:
   version "3.0.2"
   resolved "https://packages.nativecode.com/repository/npm/yallist/-/yallist-3.0.2.tgz#8452b4bb7e83c7c188d8041c1a837c773d6d8bb9"
-
-yamljs@^0.2.10:
-  version "0.2.10"
-  resolved "https://packages.nativecode.com/repository/npm/yamljs/-/yamljs-0.2.10.tgz#481cc7c25ca73af59f591f0c96e3ce56c757a40f"
-  dependencies:
-    argparse "^1.0.7"
-    glob "^7.0.5"
 
 yargs-parser@^10.0.0:
   version "10.0.0"

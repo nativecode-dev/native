@@ -1,5 +1,5 @@
-import { IrcWatch } from './IrcWatcher'
-import { CreateQueueUrl, IrcQueue } from '@nativecode/irc-pubsub'
+import { IrcWatch } from './IrcWatch'
+import { CreateQueueUrl, IrcQueue } from '@ncpub/irc-pubsub'
 
 async function run() {
   process.env['AMQPTS_LOGLEVEL'] = 'info'

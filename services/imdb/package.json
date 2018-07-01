@@ -1,9 +1,10 @@
 {
-  "name": "@nativecode/imdb",
-  "version": "1.0.0",
+  "name": "@ncpub/imdb",
+  "version": "0.0.0",
   "main": "index.js",
   "author": "opensource@nativecode.com",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "start": "ts-node src/CLI.ts"

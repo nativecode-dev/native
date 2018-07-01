@@ -5,7 +5,7 @@ import { ConnectionInfo } from 'ircv3/lib/Connection/Connection'
 import { PrivateMessage } from 'ircv3/lib/Message/MessageTypes/Commands'
 
 import { Logger } from './Logger'
-import { IrcQueue, TorrentLink } from '@nativecode/irc-pubsub'
+import { IrcQueue, TorrentLink } from '@ncpub/irc-pubsub'
 
 export class IrcWatch {
   private readonly irclient: Client

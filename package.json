@@ -16,6 +16,8 @@
   "scripts": {
     "build": "lerna bootstrap ; lerna run build",
     "prebuild": "yarn",
-    "start": "lerna run start"
+    "start": "lerna run start",
+    "docker": "lerna run docker",
+    "push": "sh push.sh"
   }
 }

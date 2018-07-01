@@ -1,0 +1,25 @@
+cache: yarn
+language: node_js
+node_js:
+- '8'
+os: linux
+stages:
+- name: deploy
+  if: (branch = "master" OR branch = "master-lts") AND type != pull_request AND tag
+    IS blank
+jobs:
+  include:
+  - stage: deploy
+    script:
+    - yarn run travis-ssh
+    - git remote set-url origin git@github.com:nativecode-dev/native.git
+    - git checkout $TRAVIS_BRANCH
+    - npm set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
+    - yarn run push
+after_failure:
+- cat lerna-debug.log
+before_install:
+- openssl aes-256-cbc -K $encrypted_c428ddd815a2_key -iv $encrypted_c428ddd815a2_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s
+- export PATH="$HOME/.yarn/bin:$PATH"

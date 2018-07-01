@@ -1,19 +1,17 @@
 {
-  "name": "@nativecode/irc-pubsub",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@ncpub/irc-pubsub",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "author": "opensource@nativecode.com",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "start": "ts-node src/CLI.ts"
+    "build": "tsc --project tsconfig.json"
   },
   "dependencies": {
     "@nofrills/lincoln": "^2.0.0",
     "@nofrills/lincoln-debug": "^2.0.0",
     "amqp-ts": "^1.4.0",
-    "irc-colors": "^1.4.2",
-    "ircv3": "^0.8.6",
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
