@@ -20,6 +20,6 @@
     "start": "lerna run start",
     "docker": "lerna run docker",
     "push": "sh push.sh",
-    "travis-ssh": "set-up-ssh --key \"$encrypted_c428ddd815a2_key\" --iv \"$encrypted_c428ddd815a2_iv\" --path-encrypted-key \"deploy_rsa.enc\""
+    "travis-ssh": "set-up-ssh --key \"$encrypted_c428ddd815a2_key\" --iv \"$encrypted_c428ddd815a2_iv\" --path-encrypted-key \"deploy.enc\""
   }
 }

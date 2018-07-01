@@ -19,7 +19,5 @@ jobs:
 after_failure:
 - cat lerna-debug.log
 before_install:
-- openssl aes-256-cbc -K $encrypted_c428ddd815a2_key -iv $encrypted_c428ddd815a2_iv
-  -in deploy_rsa.enc -out deploy_rsa -d
 - curl -o- -L https://yarnpkg.com/install.sh | bash -s
 - export PATH="$HOME/.yarn/bin:$PATH"
