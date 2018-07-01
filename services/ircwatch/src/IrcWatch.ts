@@ -1,11 +1,12 @@
 import * as colors from 'irc-colors'
 
+import { IrcQueue, TorrentLink } from '@ncpub/irc-pubsub'
 import { Client } from 'ircv3'
 import { ConnectionInfo } from 'ircv3/lib/Connection/Connection'
 import { PrivateMessage } from 'ircv3/lib/Message/MessageTypes/Commands'
+import { URL } from 'url'
 
 import { Logger } from './Logger'
-import { IrcQueue, TorrentLink } from '@ncpub/irc-pubsub'
 
 export class IrcWatch {
   private readonly irclient: Client
@@ -16,14 +17,13 @@ export class IrcWatch {
 
   constructor(
     private readonly queue: IrcQueue,
-    private readonly host: string,
-    private readonly port: number = 6667,
+    private readonly url: URL,
     private readonly retryCount?: number
   ) {
     const connection: ConnectionInfo = {
-      hostName: host,
-      nick: 'irc-watch',
-      port
+      hostName: url.hostname,
+      nick: url.username,
+      port: Number(url.port),
     }
 
     this.irclient = new Client({ connection, debugLevel: 0 })
@@ -33,13 +33,13 @@ export class IrcWatch {
     return this.irclient
   }
 
-  connect(channel: string): Promise<void> {
+  connect(): Promise<void> {
     this.retries = 0
 
     this.client.onConnect(this.onConnect)
     this.client.onDisconnect(this.onDisconnect)
     this.client.onPrivmsg(this.onPrivateMessage)
-    this.client.onRegister(() => this.onRegister(channel))
+    this.client.onRegister(() => this.onRegister(this.url.pathname.substr(1)))
 
     return this.client.connect()
   }
@@ -53,7 +53,7 @@ export class IrcWatch {
   }
 
   private onConnect = () => {
-    this.logger.info(`connected to irc://${this.host}:${this.port}`)
+    this.logger.info(`connected to ${this.url.toString()} as ${this.url.username}`)
   }
 
   private onDisconnect = (reason?: Error) => {

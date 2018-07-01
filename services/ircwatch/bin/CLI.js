@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,17 +10,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const IrcWatch_1 = require("./IrcWatch");
 const irc_pubsub_1 = require("@ncpub/irc-pubsub");
+const url_1 = require("url");
+const IrcWatch_1 = require("./IrcWatch");
+const Logger_1 = require("./Logger");
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
-        process.env['AMQPTS_LOGLEVEL'] = 'info';
-        const url = irc_pubsub_1.CreateQueueUrl('queue.nativecode.com', undefined, 'ircwatch', 'irc.watch', 'ircwatch');
-        console.log(`starting queue [${url.toString()}]...`);
-        const queue = new irc_pubsub_1.IrcQueue(url);
+        const url_queue = new url_1.URL(process.env['URL_QUEUE'] || 'amqp://localhost');
+        Logger_1.Logger.info(`starting queue [${url_queue.toString()}]...`);
+        const queue = new irc_pubsub_1.IrcQueue(url_queue);
         yield queue.connect();
-        console.log('starting watcher...');
-        const irc = new IrcWatch_1.IrcWatch(queue, 'irc.xspeeds.eu', undefined, 0);
+        const url_irc = new url_1.URL(process.env['URL_IRC'] || 'irc://locahost');
+        Logger_1.Logger.info(`starting watcher [${url_irc.toString()}]...`);
+        const irc = new IrcWatch_1.IrcWatch(queue, url_irc, 0);
         yield irc.connect('announce');
     });
 }

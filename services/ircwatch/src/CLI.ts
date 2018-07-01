@@ -1,18 +1,19 @@
+import { IrcQueue } from '@ncpub/irc-pubsub'
+import { URL } from 'url'
+
 import { IrcWatch } from './IrcWatch'
-import { CreateQueueUrl, IrcQueue } from '@ncpub/irc-pubsub'
+import { Logger } from './Logger'
 
 async function run() {
-  process.env['AMQPTS_LOGLEVEL'] = 'info'
-
-  const url = CreateQueueUrl('queue.nativecode.com', undefined, 'ircwatch', 'irc.watch', 'ircwatch')
-
-  console.log(`starting queue [${url.toString()}]...`)
-  const queue = new IrcQueue(url)
+  const url_queue = new URL(process.env['URL_QUEUE'] || 'amqp://localhost')
+  Logger.info(`starting queue [${url_queue.toString()}]...`)
+  const queue = new IrcQueue(url_queue)
   await queue.connect()
 
-  console.log('starting watcher...')
-  const irc = new IrcWatch(queue, 'irc.xspeeds.eu', undefined, 0)
-  await irc.connect('announce')
+  const url_irc = new URL(process.env['URL_IRC'] || 'irc://locahost')
+  Logger.info(`starting watcher [${url_irc.toString()}]...`)
+  const irc = new IrcWatch(queue, url_irc, 0)
+  await irc.connect()
 }
 
 run().catch(console.log)

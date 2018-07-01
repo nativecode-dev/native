@@ -12,15 +12,14 @@ const colors = require("irc-colors");
 const ircv3_1 = require("ircv3");
 const Logger_1 = require("./Logger");
 class IrcWatch {
-    constructor(queue, host, port = 6667, retryCount) {
+    constructor(queue, url, retryCount) {
         this.queue = queue;
-        this.host = host;
-        this.port = port;
+        this.url = url;
         this.retryCount = retryCount;
         this.logger = Logger_1.Logger;
         this.retries = 0;
         this.onConnect = () => {
-            this.logger.info(`connected to irc://${this.host}:${this.port}`);
+            this.logger.info(`connected to ${this.url.toString()}`);
         };
         this.onDisconnect = (reason) => {
             if (reason) {
@@ -64,9 +63,9 @@ class IrcWatch {
             this.logger.info(`listening for new messages in ${channelName}`);
         };
         const connection = {
-            hostName: host,
-            nick: 'irc-watch',
-            port
+            hostName: url.host,
+            nick: url.username,
+            port: Number(url.port),
         };
         this.irclient = new ircv3_1.Client({ connection, debugLevel: 0 });
     }
