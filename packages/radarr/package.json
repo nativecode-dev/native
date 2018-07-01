@@ -1,6 +1,6 @@
 {
   "name": "@ncpub/radarr",
-  "version": "0.0.0",
+  "version": "0.2.27",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "author": "opensource@nativecode.com",
