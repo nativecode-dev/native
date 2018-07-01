@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@ncpub/irc-pubsub": "^0.2.1",
-    "@nofrills/lincoln": "^2.0.0",
     "@nofrills/lincoln-debug": "^2.0.0",
     "irc-colors": "^1.4.2",
     "ircv3": "^0.8.6",

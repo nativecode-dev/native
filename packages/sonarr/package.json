@@ -1,6 +1,6 @@
 {
-  "name": "@ncpub/irc-pubsub",
-  "version": "0.2.1",
+  "name": "@ncpub/sonarr",
+  "version": "0.0.0",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "author": "opensource@nativecode.com",
@@ -18,9 +18,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@nofrills/lincoln-debug": "^2.0.0",
-    "amqp-ts": "^1.4.0",
-    "rxjs": "^6.2.1"
+    "@nofrills/http": "^2.2.1",
+    "@nofrills/lincoln-debug": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^10.3.4",

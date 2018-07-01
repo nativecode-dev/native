@@ -1,4 +1,7 @@
 .vscode/
+bin/
+dist/
+lib/
 node_modules/
 deploy
 deploy.pub

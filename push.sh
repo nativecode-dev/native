@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RELEASE=${RELEASE:="prerelease"}
+export RELEASE=${RELEASE:="prerelease"}
 TRAVIS_BRANCH=${TRAVIS_BRANCH:="invalid"}
 
 if [ $TRAVIS_BRANCH = "master" ] && [ $TRAVIS_EVENT_TYPE = "push" ]; then
