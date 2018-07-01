@@ -18,8 +18,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@nofrills/http": "^2.2.1",
-    "@nofrills/lincoln-debug": "^2.0.0"
+    "@nofrills/http": "^2.2.2",
+    "@nofrills/lincoln-debug": "^2.2.2"
   },
   "devDependencies": {
     "@types/node": "^10.3.4",

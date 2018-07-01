@@ -1,37 +1,30 @@
-import fetch, { RequestInit } from 'node-fetch'
+import { HTTP } from '@nofrills/http'
+import { URL } from 'url'
 import { Movie, MovieQuality, ReleaseInfo } from './models'
 
-export class Radarr {
-  private readonly initialized: Promise<ServiceUri>
-  private readonly env: Environment
-
-  constructor() {
-    this.initialized = this.init()
+export class Radarr extends HTTP {
+  constructor(private readonly baseUrl: URL) {
+    super()
   }
 
   public async movie(movieId: number): Promise<Movie> {
-    const api = await this.initialized
-    return this.get<Movie>(`${api.url}/movie/${movieId}`)
+    return this.get<Movie>(`${this.baseUrl.toString()}/movie/${movieId}`)
   }
 
   public async movies(): Promise<Movie[]> {
-    const api = await this.initialized
-    return this.get<Movie[]>(`${api.url}/movie`)
+    return this.get<Movie[]>(`${this.baseUrl.toString()}/movie`)
   }
 
   public async page(pageSize: number, start: number = 1): Promise<Movie[]> {
-    const api = await this.initialized
-    return this.get<Movie[]>(`${api.url}/movie?page=${start}&pageSize=${pageSize}`)
+    return this.get<Movie[]>(`${this.baseUrl.toString()}/movie?page=${start}&pageSize=${pageSize}`)
   }
 
   public async profiles(): Promise<MovieQuality[]> {
-    const api = await this.initialized
-    return this.get<MovieQuality[]>(`${api.url}/profile`)
+    return this.get<MovieQuality[]>(`${this.baseUrl.toString()}/profile`)
   }
 
   public async release(release: ReleaseInfo): Promise<void> {
-    const api = await this.initialized
-    return this.post<ReleaseInfo, void>(`${api.url}/release/push`, release)
+    return this.post<ReleaseInfo, void>(`${this.baseUrl.toString()}/release/push`, release)
   }
 
   public async toggleMonitor(movieId: number, toggle: boolean): Promise<void> {
@@ -42,8 +35,7 @@ export class Radarr {
   }
 
   public async update(movie: Movie): Promise<Movie> {
-    const api = await this.initialized
-    return this.put<Movie, Movie>(`${api.url}/movie`, movie)
+    return this.put<Movie, Movie>(`${this.baseUrl.toString()}/movie`, movie)
   }
 
   protected get name(): string {
@@ -51,22 +43,17 @@ export class Radarr {
   }
 
   protected async request<T>(body?: T): Promise<RequestInit> {
-    const api = await this.initialized
     return {
       body: JSON.stringify(body),
       headers: {
         'accept': 'application/json,text/json',
         'content-type': 'application/json',
-        'x-api-key': api.key,
+        'x-api-key': this.baseUrl.password,
       },
     }
   }
 
-  private async init(): Promise<ServiceUri> {
-    const key = await this.env.var('RADARR_APIKEY')
-    const url = await this.env.var('RADARR_ENDPOINT', 'http://localhost:7878/api')
-
-    this.log.trace(`set radarr to ${url}`)
-    return { key, url }
+  private onoff(value: boolean): string {
+    return value ? 'on' : 'off'
   }
 }

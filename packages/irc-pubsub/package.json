@@ -18,7 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@nofrills/lincoln-debug": "^2.0.0",
+    "@nofrills/lincoln-debug": "^2.2.2",
     "amqp-ts": "^1.4.0",
     "rxjs": "^6.2.1"
   },
