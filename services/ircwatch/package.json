@@ -1,6 +1,6 @@
 {
   "name": "@ncpub/ircwatch",
-  "version": "0.2.24",
+  "version": "0.2.25",
   "main": "bin/CLI.js",
   "bin": "bin/CLI.js",
   "author": "opensource@nativecode.com",
