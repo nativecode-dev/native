@@ -1,6 +1,6 @@
 {
   "name": "@ncpub/ircwatch",
-  "version": "0.2.0",
+  "version": "0.2.4",
   "main": "bin/CLI.js",
   "bin": "bin/CLI.js",
   "author": "opensource@nativecode.com",
@@ -22,7 +22,7 @@
     "predocker-push": "yarn run docker"
   },
   "dependencies": {
-    "@ncpub/irc-pubsub": "^0.2.0",
+    "@ncpub/irc-pubsub": "^0.2.1",
     "@nofrills/lincoln": "^2.0.0",
     "@nofrills/lincoln-debug": "^2.0.0",
     "irc-colors": "^1.4.2",
