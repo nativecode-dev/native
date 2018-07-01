@@ -8,7 +8,9 @@
       "ignore": [
         "*.md",
         "LICENSE"
-      ]
+      ],
+      "skipGit": false,
+      "yes": true
     },
     "run": {
       "stream": true

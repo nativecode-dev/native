@@ -7,6 +7,8 @@
   "private": true,
   "scripts": {
     "build": "tsc --project tsconfig.json",
+    "prebuild": "yarn run clean",
+    "clean": "rimraf bin",
     "start": "ts-node src/CLI.ts"
   },
   "dependencies": {
@@ -17,6 +19,8 @@
   "devDependencies": {
     "@types/node": "^10.3.4",
     "@types/tar": "^4.0.0",
+    "cross-env": "^5.2.0",
+    "rimraf": "^2.6.2",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
     "typescript": "^2.9.2"
