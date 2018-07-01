@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@alrra/travis-scripts@^3.0.1":
+  version "3.0.1"
+  resolved "https://packages.nativecode.com/repository/npm/@alrra/travis-scripts/-/travis-scripts-3.0.1.tgz#45d5b9357317b6cc5553dfd99931843ae0b0e53a"
+
 "@angular-devkit/architect@0.6.8":
   version "0.6.8"
   resolved "https://packages.nativecode.com/repository/npm/@angular-devkit/architect/-/architect-0.6.8.tgz#977acc605aba45d21b95ca704cc99492e14299dd"
@@ -6814,10 +6818,6 @@ tough-cookie@~2.3.0, tough-cookie@~2.3.3:
   resolved "https://packages.nativecode.com/repository/npm/tough-cookie/-/tough-cookie-2.3.4.tgz#ec60cee38ac675063ffc97a5c18970578ee83655"
   dependencies:
     punycode "^1.4.1"
-
-travis@^0.1.1:
-  version "0.1.1"
-  resolved "https://packages.nativecode.com/repository/npm/travis/-/travis-0.1.1.tgz#80fe1c36f6f3b739fce07e6063838ce436357d60"
 
 tree-kill@^1.0.0, tree-kill@^1.2.0:
   version "1.2.0"
