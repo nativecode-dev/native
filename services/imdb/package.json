@@ -10,13 +10,13 @@
     "url": "git+https://github.com/nativecode-dev/native.git"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "build": "tsc --project tsconfig.build.json",
     "prebuild": "yarn run clean",
     "clean": "rimraf bin",
     "start": "ts-node src/CLI.ts"
   },
   "dependencies": {
-    "@nofrills/lincoln-debug": "^2.2.2",
+    "@nofrills/lincoln-debug": "^2.2.5",
     "gunzip-maybe": "^1.4.1",
     "rxjs": "^6.2.1",
     "tar": "^4.4.4"

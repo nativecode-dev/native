@@ -1,8 +1,8 @@
 {
   "name": "@ncpub/relman",
   "version": "0.2.27",
-  "main": "bin/CLI.js",
-  "bin": "bin/CLI.js",
+  "main": "bin/relman.js",
+  "bin": "bin/relman.js",
   "author": "opensource@nativecode.com",
   "license": "MIT",
   "private": true,
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/nativecode-dev/native.git"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "build": "tsc --project tsconfig.build.json",
     "prebuild": "yarn run clean",
     "postbuild": "bin-shebang",
     "clean": "rimraf bin",
@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "@ncpub/irc-pubsub": "^0.2.27",
-    "@nofrills/console": "^2.2.4",
-    "@nofrills/lincoln-debug": "^2.2.2"
+    "@nofrills/console": "^2.2.5",
+    "@nofrills/lincoln-debug": "^2.2.5"
   },
   "devDependencies": {
     "@types/node": "^10.3.4",

@@ -1,4 +1,4 @@
-import { Image, Quality, Rating } from './index'
+import { Image, Rating } from './index'
 import { MovieFile } from './MovieFile'
 import { MovieTitle } from './MovieTitle'
 

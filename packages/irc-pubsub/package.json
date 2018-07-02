@@ -10,7 +10,7 @@
     "url": "git+https://github.com/nativecode-dev/native.git"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "build": "tsc --project tsconfig.build.json",
     "prebuild": "yarn run clean",
     "clean": "rimraf lib"
   },
@@ -18,7 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@nofrills/lincoln-debug": "^2.2.2",
+    "@nofrills/lincoln-debug": "^2.2.5",
     "amqp-ts": "^1.4.0",
     "rxjs": "^6.2.1"
   },

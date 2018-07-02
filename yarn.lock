@@ -90,7 +90,7 @@
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@nofrills/collections/-/collections-2.2.5.tgz#b3957436ff4bd5ff5b1403b38a0af32ad9d16944"
 
-"@nofrills/console@^2.2.4":
+"@nofrills/console@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@nofrills/console/-/console-2.2.5.tgz#efc82202ca12fcb0f288a0c6862e14693b19a6ea"
   dependencies:
@@ -105,14 +105,14 @@
     "@nofrills/lincoln-debug" "^2.2.5"
     node-fetch "^1.7.3"
 
-"@nofrills/http@^2.2.2":
+"@nofrills/http@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@nofrills/http/-/http-2.2.5.tgz#7a9522b1e81b2ada9c2f589ddc730caf4da85d26"
   dependencies:
     "@nofrills/lincoln-debug" "^2.2.5"
     node-fetch "^1.7.3"
 
-"@nofrills/lincoln-debug@^2.2.2", "@nofrills/lincoln-debug@^2.2.5":
+"@nofrills/lincoln-debug@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@nofrills/lincoln-debug/-/lincoln-debug-2.2.5.tgz#67905332a4ba538ff85f364eaa128b5672401d23"
   dependencies:

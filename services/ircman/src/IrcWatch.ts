@@ -88,6 +88,7 @@ export class IrcWatch {
         const link: Partial<TorrentLink> = {}
 
         let matches: RegExpExecArray | null
+        // tslint:disable-next-line:no-conditional-assignment
         while ((matches = pattern.exec(clean)) !== null) {
           const key = matches[1].toLowerCase()
           const value = matches[2]

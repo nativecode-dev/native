@@ -5,8 +5,10 @@
     "declaration": true,
     "sourceMap": true,
     "strict": true,
+    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   }

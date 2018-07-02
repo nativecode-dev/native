@@ -5,14 +5,14 @@ import { IrcWatch } from './IrcWatch'
 import { Logger } from './Logger'
 
 async function run() {
-  const url_queue = new URL(process.env['URL_QUEUE'] || 'amqp://localhost')
-  Logger.info(`starting queue [${url_queue.toString()}]...`)
-  const queue = new IrcQueue(url_queue)
+  const urlQueue = new URL(process.env['URL_QUEUE'] || 'amqp://localhost')
+  Logger.info(`starting queue [${urlQueue.toString()}]...`)
+  const queue = new IrcQueue(urlQueue)
   await queue.connect()
 
-  const url_irc = new URL(process.env['URL_IRC'] || 'irc://locahost')
-  Logger.info(`starting watcher [${url_irc.toString()}]...`)
-  const irc = new IrcWatch(queue, url_irc, 0)
+  const urlIrc = new URL(process.env['URL_IRC'] || 'irc://locahost')
+  Logger.info(`starting watcher [${urlIrc.toString()}]...`)
+  const irc = new IrcWatch(queue, urlIrc, 0)
   await irc.connect()
 }
 
