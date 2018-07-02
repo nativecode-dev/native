@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "tsc --project tsconfig.json",
-    "prebuild": "yarn && yarn run clean",
+    "prebuild": "yarn run clean",
     "clean": "rimraf lib"
   },
   "publishConfig": {

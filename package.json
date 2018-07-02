@@ -5,14 +5,36 @@
   "author": "opensource@nativecode.com",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "interfaces/*",
-    "packages/*",
-    "services/*"
-  ],
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
-    "lerna": "^2.11.0"
+    "coveralls": "^3.0.0",
+    "lerna": "^2.11.0",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "source-map-support": "^0.5.0",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.8.0",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.6.1"
+  },
+  "nyc": {
+    "all": true,
+    "exclude": [
+      "node_modules",
+      "packages/*/src/**/*.spec.ts",
+      "packages/*/src/Logger.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "packages/*/src/**/*.ts"
+    ],
+    "instrument": true,
+    "report-dir": ".cache/coverage",
+    "reporter": "text",
+    "sourceMap": true,
+    "temp-directory": ".cache/nyc"
   },
   "scripts": {
     "build": "lerna bootstrap ; lerna run build",
@@ -22,5 +44,9 @@
     "docker": "lerna run docker",
     "push": "sh push.sh",
     "travis-ssh": "set-up-ssh --key \"$encrypted_c428ddd815a2_key\" --iv \"$encrypted_c428ddd815a2_iv\" --path-encrypted-key \"deploy.enc\""
-  }
+  },
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ]
 }

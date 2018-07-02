@@ -1,10 +1,11 @@
 {
-  "name": "@ncpub/radarr",
+  "name": "@ncpub/relman",
   "version": "0.2.27",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "bin/CLI.js",
+  "bin": "bin/CLI.js",
   "author": "opensource@nativecode.com",
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nativecode-dev/native.git"
@@ -12,17 +13,22 @@
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "prebuild": "yarn run clean",
-    "clean": "rimraf lib"
-  },
-  "publishConfig": {
-    "access": "public"
+    "postbuild": "bin-shebang",
+    "clean": "rimraf bin",
+    "start": "node bin/CLI.js",
+    "startdev": "ts-node src/CLI.ts",
+    "docker": "docker build --rm -t nativecode/ircwatch:latest .",
+    "docker-push": "docker push nativecode/ircwatch:latest",
+    "predocker-push": "yarn run docker"
   },
   "dependencies": {
-    "@nofrills/http": "^2.2.2",
+    "@ncpub/irc-pubsub": "^0.2.27",
+    "@nofrills/console": "^2.2.4",
     "@nofrills/lincoln-debug": "^2.2.2"
   },
   "devDependencies": {
     "@types/node": "^10.3.4",
+    "bin-shebang": "^1.0.11",
     "cross-env": "^5.2.0",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.0",

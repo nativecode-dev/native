@@ -1,5 +1,5 @@
 {
-  "name": "@ncpub/ircwatch",
+  "name": "@ncpub/ircman",
   "version": "0.2.27",
   "main": "bin/CLI.js",
   "bin": "bin/CLI.js",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "tsc --project tsconfig.json",
-    "prebuild": "yarn && yarn run clean",
+    "prebuild": "yarn run clean",
     "postbuild": "bin-shebang",
     "clean": "rimraf bin",
     "start": "node bin/CLI.js",
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@ncpub/irc-pubsub": "^0.2.27",
-    "@nofrills/lincoln-debug": "^2.0.0",
+    "@nofrills/lincoln-debug": "^2.2.2",
     "irc-colors": "^1.4.2",
     "ircv3": "^0.8.6",
     "rxjs": "^6.2.1"

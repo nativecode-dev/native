@@ -16,6 +16,7 @@ COPY /src /app/src
 COPY /types /app/types
 COPY tsconfig.json /app
 RUN set -ex \
+  && yarn install \
   && yarn build \
   ;
 

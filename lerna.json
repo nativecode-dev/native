@@ -24,7 +24,6 @@
   "useWorkspaces": true,
   "lerna": "2.11.0",
   "packages": [
-    "interfaces/*",
     "packages/*",
     "services/*"
   ],
