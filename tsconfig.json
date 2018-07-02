@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": "./packages",
     "paths": {
-      "@ncpub/*": ["./*/src"]
+      "@ncpub/*": ["./*/src"],
+      "@nofrills/*": ["../nofrills/packages/*/src"]
     }
   }
 }

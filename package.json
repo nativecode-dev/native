@@ -40,7 +40,9 @@
     "build": "lerna bootstrap ; lerna run build",
     "prebuild": "yarn",
     "start": "lerna run startdev",
-    "test": "yarn run build",
+		"test": "cross-env DEBUG= nyc mocha --opts mocha.opts",
+		"pretest": "yarn run build",
+		"testonly": "cross-env DEBUG= nyc mocha --opts mocha.opts",
     "docker": "lerna run docker",
     "push": "sh push.sh",
     "travis-ssh": "set-up-ssh --key \"$encrypted_c428ddd815a2_key\" --iv \"$encrypted_c428ddd815a2_iv\" --path-encrypted-key \"deploy.enc\""

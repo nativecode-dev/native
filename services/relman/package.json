@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@ncpub/irc-pubsub": "^0.2.27",
-    "@nofrills/console": "^2.2.5",
+    "@nofrills/console": "^2.2.6",
     "@nofrills/lincoln-debug": "^2.2.5"
   },
   "devDependencies": {
