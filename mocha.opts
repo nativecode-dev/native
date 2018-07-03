@@ -3,4 +3,4 @@
 --full-trace
 --recursive
 --bail
-packages/*/specs/**/*.spec.ts
+**/specs/**/*.spec.ts

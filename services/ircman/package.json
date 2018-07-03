@@ -17,8 +17,8 @@
     "clean": "rimraf bin",
     "start": "node bin/CLI.js",
     "startdev": "ts-node src/CLI.ts",
-    "docker": "docker build --rm -t nativecode/ircwatch:latest .",
-    "docker-push": "docker push nativecode/ircwatch:latest",
+    "docker": "docker build --rm -t nativecode/ircman:latest .",
+    "docker-push": "docker push nativecode/ircman:latest",
     "predocker-push": "yarn run docker"
   },
   "dependencies": {

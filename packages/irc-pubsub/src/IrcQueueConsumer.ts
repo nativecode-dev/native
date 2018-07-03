@@ -2,7 +2,12 @@ import { Exchange, Message, Queue } from 'amqp-ts'
 import { QueueConnection } from './QueueConnection'
 import { TorrentLink } from './TorrentLink'
 
-export class IrcQueueConsumer extends QueueConnection<TorrentLink> {
+export interface Envelope {
+  message: Message
+  torrent: TorrentLink
+}
+
+export class IrcQueueConsumer extends QueueConnection<Envelope> {
   private readonly exchange: Exchange
   private readonly queue: Queue
 
@@ -18,13 +23,11 @@ export class IrcQueueConsumer extends QueueConnection<TorrentLink> {
 
   private dequeue = (message: Message) => {
     try {
-      const content = message.getContent()
-      this.logger.debug(content)
-      this.next(content)
-      message.ack()
+      const torrent = message.getContent()
+      this.logger.debug(torrent)
+      this.next({ message, torrent })
     } catch (error) {
       this.logger.error(error)
-      message.nack()
     }
   }
 }

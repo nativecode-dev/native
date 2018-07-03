@@ -14,7 +14,7 @@ FROM base AS build
 WORKDIR /app
 COPY /src /app/src
 COPY /types /app/types
-COPY tsconfig.json /app
+COPY *.json /app/
 RUN set -ex \
   && yarn install \
   && yarn build \
