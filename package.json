@@ -43,7 +43,7 @@
     "start": "lerna run startdev",
     "test": "cross-env DEBUG= nyc mocha --opts mocha.opts",
     "pretest": "yarn run build",
-    "testonly": "cross-env DEBUG= nyc mocha --opts mocha.opts",
+    "testonly": "cross-env DEBUG=native* nyc mocha --opts mocha.opts",
     "docker": "lerna run docker",
     "docker-push": "lerna run docker-push",
     "push": "sh push.sh",

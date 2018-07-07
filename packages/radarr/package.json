@@ -18,16 +18,17 @@
     "access": "public"
   },
   "dependencies": {
-    "@nofrills/http": "^2.2.5",
-    "@nofrills/lincoln-debug": "^2.2.5"
+    "@nofrills/http": "^3.1.4-2",
+    "@nofrills/lincoln-debug": "^3.1.4-2",
+    "@nofrills/scrubs": "^3.1.4-2"
   },
   "devDependencies": {
     "@types/chai": "^4.0.5",
-    "@types/mocha": "^2.2.44",
-    "@types/node": "^10.3.4",
+    "@types/mocha": "^5.2.4",
+    "@types/node": "^10.5.2",
     "chai": "^4.1.2",
     "cross-env": "^5.2.0",
-    "mocha": "^4.0.1",
+    "mocha": "^5.2.0",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",

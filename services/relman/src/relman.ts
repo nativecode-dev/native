@@ -1,5 +1,5 @@
 import { CLI, ConsoleOptions } from '@nofrills/console'
-import { IrcQueueConsumer, Envelope } from '@ncpub/irc-pubsub'
+import { IrcQueueConsumer } from '@ncpub/irc-pubsub'
 import { URL } from 'url'
 
 async function initialize() {

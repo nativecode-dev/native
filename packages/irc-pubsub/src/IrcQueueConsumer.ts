@@ -1,4 +1,6 @@
+import { URL } from 'url'
 import { Exchange, Message, Queue } from 'amqp-ts'
+
 import { QueueConnection } from './QueueConnection'
 import { TorrentLink } from './TorrentLink'
 

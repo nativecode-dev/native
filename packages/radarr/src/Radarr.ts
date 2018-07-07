@@ -1,41 +1,49 @@
 import { HTTP } from '@nofrills/http'
 import { URL } from 'url'
 import { Movie, MovieQuality, ReleaseInfo } from './models'
+import { Logger } from './Logger'
 
 export class Radarr extends HTTP {
+  private readonly endpoint: URL
+
+  private readonly logger = Logger.extend('radarr')
+
   constructor(private readonly baseUrl: URL) {
     super()
+    this.endpoint = new URL('api', `${baseUrl.protocol}//${baseUrl.hostname}${baseUrl.pathname}`)
+    this.logger.debug('basurl', baseUrl.toString())
+    this.logger.debug('endpoint', this.endpoint.toString())
   }
 
   public async movie(movieId: number): Promise<Movie> {
-    return this.get<Movie>(`${this.baseUrl.toString()}/movie/${movieId}`)
+    return this.get<Movie>(`${this.endpoint.toString()}/movie/${movieId}`)
   }
 
   public async movies(): Promise<Movie[]> {
-    return this.get<Movie[]>(`${this.baseUrl.toString()}/movie`)
+    return this.get<Movie[]>(`${this.endpoint.toString()}/movie`)
   }
 
   public async page(pageSize: number, start: number = 1): Promise<Movie[]> {
-    return this.get<Movie[]>(`${this.baseUrl.toString()}/movie?page=${start}&pageSize=${pageSize}`)
+    return this.get<Movie[]>(`${this.endpoint.toString()}/movie?page=${start}&pageSize=${pageSize}`)
   }
 
   public async profiles(): Promise<MovieQuality[]> {
-    return this.get<MovieQuality[]>(`${this.baseUrl.toString()}/profile`)
+    return this.get<MovieQuality[]>(`${this.endpoint.toString()}/profile`)
   }
 
   public async release(release: ReleaseInfo): Promise<void> {
-    return this.post<ReleaseInfo, void>(`${this.baseUrl.toString()}/release/push`, release)
+    return this.post<ReleaseInfo, void>(`${this.endpoint.toString()}/release/push`, release)
   }
 
   public async toggleMonitor(movieId: number, toggle: boolean): Promise<void> {
     const movie = await this.movie(movieId)
     movie.monitored = toggle
     await this.update(movie)
-    this.log.info(`turned ${this.onoff(toggle)} monitoring for: "${movie.title}" (${movie.year})`)
+    this.logger.info(`turned ${this.onoff(toggle)} monitoring for: "${movie.title}" (${movie.year})`)
   }
 
   public async update(movie: Movie): Promise<Movie> {
-    return this.put<Movie, Movie>(`${this.baseUrl.toString()}/movie`, movie)
+    return this.put<Movie, Movie>(`${this.endpoint.toString()}/movie`, movie)
   }
 
   protected get name(): string {

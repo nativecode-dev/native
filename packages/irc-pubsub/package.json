@@ -18,12 +18,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@nofrills/lincoln-debug": "^2.2.5",
+    "@nofrills/lincoln-debug": "^3.1.4-2",
     "amqp-ts": "^1.4.0",
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
-    "@types/node": "^10.3.4",
+    "@types/node": "^10.5.2",
     "cross-env": "^5.2.0",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.0",
