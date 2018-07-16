@@ -1,6 +1,5 @@
---require source-map-support/register
---require ts-node/register
 --full-trace
 --recursive
---bail
+--require source-map-support/register
+--require ts-node/register
 **/specs/**/*.spec.ts

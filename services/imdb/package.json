@@ -16,7 +16,7 @@
     "start": "ts-node src/CLI.ts"
   },
   "dependencies": {
-    "@nofrills/lincoln-debug": "^3.1.4-2",
+    "@nofrills/lincoln-debug": "^3.1.5",
     "gunzip-maybe": "^1.4.1",
     "rxjs": "^6.2.1",
     "tar": "^4.4.4"

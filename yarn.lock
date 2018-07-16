@@ -86,97 +86,62 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
-"@nofrills/collections@^3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@nofrills/collections/-/collections-3.1.4.tgz#4364e119fa852785c1db38f78bf2961a7ddb76cb"
+"@nofrills/collections@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@nofrills/collections/-/collections-3.1.5.tgz#d5aac7026274e6c28a4bb5ffd9a9f0192ddfa0b4"
 
-"@nofrills/collections@^3.1.4-2":
-  version "3.1.4-2"
-  resolved "https://registry.yarnpkg.com/@nofrills/collections/-/collections-3.1.4-2.tgz#7bc54f7bca3e5bdfd11c1582fbf50070c1c893fb"
-
-"@nofrills/console@^3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@nofrills/console/-/console-3.1.4.tgz#2210ab8028bf175ef2190e7933a1503a2576c5b9"
+"@nofrills/console@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@nofrills/console/-/console-3.1.5.tgz#32cea667df3bad35f030a7ad29f5bb4877e35f14"
   dependencies:
-    "@nofrills/fs" "^3.1.4"
-    "@nofrills/lincoln-debug" "^3.1.4"
-    "@nofrills/scrubs" "^3.1.4"
+    "@nofrills/fs" "^3.1.5"
+    "@nofrills/lincoln-debug" "^3.1.5"
+    "@nofrills/scrubs" "^3.1.5"
     node-fetch "^2.1.2"
 
-"@nofrills/fs@^3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@nofrills/fs/-/fs-3.1.4.tgz#7eee5d32a94e664159748abd6dadc4403f42af5a"
+"@nofrills/fs@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@nofrills/fs/-/fs-3.1.5.tgz#459568c7ff6ffa09aaadab4d2e354f072247e8e8"
   dependencies:
-    "@nofrills/lincoln-debug" "^3.1.4"
+    "@nofrills/lincoln-debug" "^3.1.5"
     glob "^7.1.2"
     mkdirp "^0.5.1"
     node-fetch "^2.1.2"
     rxjs "^6.2.1"
 
-"@nofrills/http@^3.1.4-2":
-  version "3.1.4-2"
-  resolved "https://registry.yarnpkg.com/@nofrills/http/-/http-3.1.4-2.tgz#958a2f8738e2343c0ee93c2266f09f4f2986df6a"
+"@nofrills/http@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@nofrills/http/-/http-3.1.5.tgz#77d637cbf7e8ee13fed3409c16e67a4b9c9aa633"
   dependencies:
-    "@nofrills/lincoln-debug" "^3.1.4-2"
-    "@nofrills/scrubs" "^3.1.4-2"
+    "@nofrills/lincoln-debug" "^3.1.5"
+    "@nofrills/scrubs" "^3.1.5"
     node-fetch "^2.1.2"
 
-"@nofrills/lincoln-debug@^3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@nofrills/lincoln-debug/-/lincoln-debug-3.1.4.tgz#aeb79b473f8d02ac04004675d052065cb0ef804c"
+"@nofrills/lincoln-debug@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@nofrills/lincoln-debug/-/lincoln-debug-3.1.5.tgz#097689b01a8a97a96ba1b9da16ce07719e989386"
   dependencies:
-    "@nofrills/collections" "^3.1.4"
-    "@nofrills/lincoln" "^3.1.4"
+    "@nofrills/collections" "^3.1.5"
+    "@nofrills/lincoln" "^3.1.5"
     debug "^3.1.0"
 
-"@nofrills/lincoln-debug@^3.1.4-2":
-  version "3.1.4-2"
-  resolved "https://registry.yarnpkg.com/@nofrills/lincoln-debug/-/lincoln-debug-3.1.4-2.tgz#729c80e93e6b7185b804a09526033173f1d44ccc"
+"@nofrills/lincoln@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@nofrills/lincoln/-/lincoln-3.1.5.tgz#9fd64d5f10b9805b7cc285d5bb65d1533210c710"
   dependencies:
-    "@nofrills/collections" "^3.1.4-2"
-    "@nofrills/lincoln" "^3.1.4-2"
-    debug "^3.1.0"
-
-"@nofrills/lincoln@^3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@nofrills/lincoln/-/lincoln-3.1.4.tgz#eb7936610625c8bc57fe31a13b8da4e6a4763d18"
-  dependencies:
-    "@nofrills/collections" "^3.1.4"
+    "@nofrills/collections" "^3.1.5"
     uuidjs "^4.0.3"
 
-"@nofrills/lincoln@^3.1.4-2":
-  version "3.1.4-2"
-  resolved "https://registry.yarnpkg.com/@nofrills/lincoln/-/lincoln-3.1.4-2.tgz#6828d4f1c0585214fbeca01812ac99d3e6f84114"
+"@nofrills/scrubs@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@nofrills/scrubs/-/scrubs-3.1.5.tgz#7bea78bcc713b653b907b555c9385e3b43afe0c3"
   dependencies:
-    "@nofrills/collections" "^3.1.4-2"
-    uuidjs "^4.0.3"
+    "@nofrills/lincoln-debug" "^3.1.5"
+    "@nofrills/types" "^3.1.5"
 
-"@nofrills/scrubs@^3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@nofrills/scrubs/-/scrubs-3.1.4.tgz#0b2a905eb9615a3228badcc3d1948fd3c0df76f1"
-  dependencies:
-    "@nofrills/lincoln-debug" "^3.1.4"
-    "@nofrills/types" "^3.1.4"
-    lodash.merge "^4.6.0"
-
-"@nofrills/scrubs@^3.1.4-2":
-  version "3.1.4-2"
-  resolved "https://registry.yarnpkg.com/@nofrills/scrubs/-/scrubs-3.1.4-2.tgz#6faee4490e49fc737b67dbc550b8a499401da938"
-  dependencies:
-    "@nofrills/lincoln-debug" "^3.1.4-2"
-    "@nofrills/types" "^3.1.4-1"
-    lodash.merge "^4.6.0"
-
-"@nofrills/types@^3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@nofrills/types/-/types-3.1.4.tgz#9f49081131c9491fe37842ffe18f3ebcfa560491"
-  dependencies:
-    validator "^10.4.0"
-    zipcodes-regex "^1.0.1"
-
-"@nofrills/types@^3.1.4-1":
-  version "3.1.4-1"
-  resolved "https://registry.yarnpkg.com/@nofrills/types/-/types-3.1.4-1.tgz#3380c280e8d7efe28f947105ae077a45f3bff290"
+"@nofrills/types@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@nofrills/types/-/types-3.1.5.tgz#32a63096ff390124d1243d93e3031f7a0e05ed7c"
   dependencies:
     validator "^10.4.0"
     zipcodes-regex "^1.0.1"
@@ -2016,10 +1981,6 @@ locate-path@^2.0.0:
 lodash._reinterpolate@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
-
-lodash.merge@^4.6.0:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
 
 lodash.template@^4.0.2:
   version "4.4.0"
