@@ -1,7 +1,7 @@
 import { HTTP } from '@nofrills/http'
 import { URL } from 'url'
 
-import { Movie, MovieQuality, Status, ReleaseInfo } from './models'
+import { Calendar, Movie, MovieQuality, Status, ReleaseInfo } from './models'
 import { Logger } from './Logger'
 
 export class Radarr extends HTTP {
@@ -14,6 +14,10 @@ export class Radarr extends HTTP {
     this.endpoint = new URL('api', `${baseUrl.protocol}//${baseUrl.hostname}${baseUrl.pathname}`)
     this.logger.debug('basurl', baseUrl.toString())
     this.logger.debug('endpoint', this.endpoint.toString())
+  }
+
+  public calendar(): Promise<Calendar[]> {
+    return this.get<Calendar[]>(`${this.endpoint.toString()}/calendar`)
   }
 
   public movie(movieId: number): Promise<Movie> {
@@ -40,7 +44,7 @@ export class Radarr extends HTTP {
     return this.get<Status>(`${this.endpoint.toString()}/system/status`)
   }
 
-  public async toggleMonitor(movieId: number, toggle: boolean): Promise<void> {
+  public async monitor(movieId: number, toggle: boolean): Promise<void> {
     const movie = await this.movie(movieId)
     movie.monitored = toggle
     await this.update(movie)

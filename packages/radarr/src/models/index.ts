@@ -1,5 +1,6 @@
 export * from './enums'
 
+export * from './Calendar'
 export * from './Image'
 export * from './MediaInfo'
 export * from './Movie'
