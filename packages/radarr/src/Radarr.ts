@@ -1,6 +1,7 @@
 import { HTTP } from '@nofrills/http'
 import { URL } from 'url'
-import { Movie, MovieQuality, ReleaseInfo } from './models'
+
+import { Movie, MovieQuality, Status, ReleaseInfo } from './models'
 import { Logger } from './Logger'
 
 export class Radarr extends HTTP {
@@ -15,24 +16,28 @@ export class Radarr extends HTTP {
     this.logger.debug('endpoint', this.endpoint.toString())
   }
 
-  public async movie(movieId: number): Promise<Movie> {
+  public movie(movieId: number): Promise<Movie> {
     return this.get<Movie>(`${this.endpoint.toString()}/movie/${movieId}`)
   }
 
-  public async movies(): Promise<Movie[]> {
+  public movies(): Promise<Movie[]> {
     return this.get<Movie[]>(`${this.endpoint.toString()}/movie`)
   }
 
-  public async page(pageSize: number, start: number = 1): Promise<Movie[]> {
+  public page(pageSize: number, start: number = 1): Promise<Movie[]> {
     return this.get<Movie[]>(`${this.endpoint.toString()}/movie?page=${start}&pageSize=${pageSize}`)
   }
 
-  public async profiles(): Promise<MovieQuality[]> {
+  public profiles(): Promise<MovieQuality[]> {
     return this.get<MovieQuality[]>(`${this.endpoint.toString()}/profile`)
   }
 
-  public async release(release: ReleaseInfo): Promise<void> {
+  public release(release: ReleaseInfo): Promise<void> {
     return this.post<ReleaseInfo, void>(`${this.endpoint.toString()}/release/push`, release)
+  }
+
+  public status(): Promise<Status> {
+    return this.get<Status>(`${this.endpoint.toString()}/system/status`)
   }
 
   public async toggleMonitor(movieId: number, toggle: boolean): Promise<void> {
@@ -42,7 +47,7 @@ export class Radarr extends HTTP {
     this.logger.info(`turned ${this.onoff(toggle)} monitoring for: "${movie.title}" (${movie.year})`)
   }
 
-  public async update(movie: Movie): Promise<Movie> {
+  public update(movie: Movie): Promise<Movie> {
     return this.put<Movie, Movie>(`${this.endpoint.toString()}/movie`, movie)
   }
 
