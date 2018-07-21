@@ -7,7 +7,7 @@ os: linux
 stages:
   - test
   - name: deploy
-    if: (branch = "master" OR branch = "master-lts") AND type != pull_request AND tag IS blank
+    if: (branch = "master" OR branch = "master-lts" OR branch = "develop") AND type != pull_request AND tag IS blank
 jobs:
   include:
     - stage: deploy
@@ -23,6 +23,8 @@ jobs:
         - yarn run push
 after_failure:
   - cat lerna-debug.log
+after_success:
+  - yarn run travis-coveralls
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s
   - export PATH="$HOME/.yarn/bin:$PATH"
