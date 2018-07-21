@@ -1,6 +1,6 @@
 {
   "name": "@konfd/konfed",
-  "version": "0.0.0",
+  "version": "0.2.28-0",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "author": "opensource@nativecode.com",

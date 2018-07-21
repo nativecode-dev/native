@@ -1,6 +1,6 @@
 {
   "name": "@ncpub/sonarr",
-  "version": "0.2.27",
+  "version": "0.2.28-0",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "author": "opensource@nativecode.com",
