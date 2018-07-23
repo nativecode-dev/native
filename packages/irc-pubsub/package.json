@@ -1,6 +1,6 @@
 {
   "name": "@ncpub/irc-pubsub",
-  "version": "0.2.28-0",
+  "version": "0.2.28-1",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "author": "opensource@nativecode.com",
