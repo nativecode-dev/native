@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": "./packages",
     "paths": {
-      "@ncpub/*": ["./*/src"]
+      "@ncpub/*": ["./*/src"],
+      "zipcodes-regex": ["./types/src/zipcodes-regex.d.ts"]
     }
   }
 }

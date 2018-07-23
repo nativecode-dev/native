@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "bin",
+    "lib": [
+      "es2018"
+    ]
+  },
+  "exclude": [
+    "specs/"
+  ]
+}
