@@ -86,63 +86,63 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
-"@nofrills/collections@^3.1.5":
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/@nofrills/collections/-/collections-3.1.5.tgz#d5aac7026274e6c28a4bb5ffd9a9f0192ddfa0b4"
+"@nofrills/collections@^3.1.6-8":
+  version "3.1.6-8"
+  resolved "https://registry.yarnpkg.com/@nofrills/collections/-/collections-3.1.6-8.tgz#56b0738ca2234ed0cc1c4670f313006b9b4e69d3"
 
-"@nofrills/console@^3.1.6-1":
-  version "3.1.6-1"
-  resolved "https://registry.yarnpkg.com/@nofrills/console/-/console-3.1.6-1.tgz#70a54df321f335caceed8f3d9dd0b0733a8f51c7"
+"@nofrills/console@^3.1.6-8":
+  version "3.1.6-8"
+  resolved "https://registry.yarnpkg.com/@nofrills/console/-/console-3.1.6-8.tgz#eff867551189413d9da3bb916a5496ae4b5395da"
   dependencies:
-    "@nofrills/fs" "^3.1.6-1"
-    "@nofrills/lincoln-debug" "^3.1.6-1"
-    "@nofrills/scrubs" "^3.1.6-1"
+    "@nofrills/fs" "^3.1.6-8"
+    "@nofrills/lincoln-debug" "^3.1.6-8"
+    "@nofrills/scrubs" "^3.1.6-8"
     node-fetch "^2.1.2"
 
-"@nofrills/fs@^3.1.6-1":
-  version "3.1.6-1"
-  resolved "https://registry.yarnpkg.com/@nofrills/fs/-/fs-3.1.6-1.tgz#de92538362289789f04dd374fe41f883cdd8d431"
+"@nofrills/fs@^3.1.6-8":
+  version "3.1.6-8"
+  resolved "https://registry.yarnpkg.com/@nofrills/fs/-/fs-3.1.6-8.tgz#b1d66ea93fb8d157362220648a9df8df9c96cd45"
   dependencies:
-    "@nofrills/lincoln-debug" "^3.1.6-1"
+    "@nofrills/lincoln-debug" "^3.1.6-8"
     glob "^7.1.2"
     mkdirp "^0.5.1"
     node-fetch "^2.1.2"
-    rxjs "^6.2.1"
+    rxjs "^6.2.2"
 
-"@nofrills/http@^3.1.6-6":
-  version "3.1.6-6"
-  resolved "https://registry.yarnpkg.com/@nofrills/http/-/http-3.1.6-6.tgz#a9e409c1b72d5a1d9ba4808eba7b72598bf372e8"
+"@nofrills/http@^3.1.6-8":
+  version "3.1.6-8"
+  resolved "https://registry.yarnpkg.com/@nofrills/http/-/http-3.1.6-8.tgz#1823aa1882caaadc5ee6e237e910a002049e05cf"
   dependencies:
-    "@nofrills/lincoln-debug" "^3.1.6-1"
-    "@nofrills/scrubs" "^3.1.6-1"
+    "@nofrills/lincoln-debug" "^3.1.6-8"
+    "@nofrills/scrubs" "^3.1.6-8"
     isomorphic-fetch "^2.2.1"
 
-"@nofrills/lincoln-debug@^3.1.6-1":
-  version "3.1.6-1"
-  resolved "https://registry.yarnpkg.com/@nofrills/lincoln-debug/-/lincoln-debug-3.1.6-1.tgz#9a74fd03c86a151bf3e308a7cdcc16b1113cdbed"
+"@nofrills/lincoln-debug@^3.1.6-8":
+  version "3.1.6-8"
+  resolved "https://registry.yarnpkg.com/@nofrills/lincoln-debug/-/lincoln-debug-3.1.6-8.tgz#537cb5bef8fbb09030b8f54b1c4a654e81db5394"
   dependencies:
-    "@nofrills/collections" "^3.1.5"
-    "@nofrills/lincoln" "^3.1.6-1"
+    "@nofrills/collections" "^3.1.6-8"
+    "@nofrills/lincoln" "^3.1.6-8"
     debug "^3.1.0"
 
-"@nofrills/lincoln@^3.1.6-1":
-  version "3.1.6-1"
-  resolved "https://registry.yarnpkg.com/@nofrills/lincoln/-/lincoln-3.1.6-1.tgz#4d743901f97bf98ec7686e2b5d910b977612e61a"
+"@nofrills/lincoln@^3.1.6-8":
+  version "3.1.6-8"
+  resolved "https://registry.yarnpkg.com/@nofrills/lincoln/-/lincoln-3.1.6-8.tgz#4c9298edd13ce5aa77bf111570cbd465ac5ea638"
   dependencies:
-    "@nofrills/collections" "^3.1.5"
+    "@nofrills/collections" "^3.1.6-8"
     uuidjs "^4.0.3"
 
-"@nofrills/scrubs@^3.1.6-1":
-  version "3.1.6-1"
-  resolved "https://registry.yarnpkg.com/@nofrills/scrubs/-/scrubs-3.1.6-1.tgz#4b4590a3bddf6b17c71ef0233f286d4ce1393d99"
+"@nofrills/scrubs@^3.1.6-8":
+  version "3.1.6-8"
+  resolved "https://registry.yarnpkg.com/@nofrills/scrubs/-/scrubs-3.1.6-8.tgz#b30d9cdb43e5a7c8b3a3023641b97324b9a98110"
   dependencies:
-    "@nofrills/lincoln-debug" "^3.1.6-1"
-    "@nofrills/types" "^3.1.6-1"
+    "@nofrills/lincoln-debug" "^3.1.6-8"
+    "@nofrills/types" "^3.1.6-8"
     deepmerge "^2.1.1"
 
-"@nofrills/types@^3.1.6-1":
-  version "3.1.6-1"
-  resolved "https://registry.yarnpkg.com/@nofrills/types/-/types-3.1.6-1.tgz#c92a901b9a7fa0f8a50e1d558edd7eecc1f485e4"
+"@nofrills/types@^3.1.6-8":
+  version "3.1.6-8"
+  resolved "https://registry.yarnpkg.com/@nofrills/types/-/types-3.1.6-8.tgz#6fb524846d03c155962b23be864b78cef96eb50e"
   dependencies:
     validator "^10.4.0"
     zipcodes-regex "^1.0.1"
@@ -1570,9 +1570,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-irc-colors@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/irc-colors/-/irc-colors-1.4.2.tgz#f8dac758553ae91f5647a2a181c0082cfe28c08e"
+irc-colors@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/irc-colors/-/irc-colors-1.4.3.tgz#840b06b18628a6760e68e4b514c710d549648aef"
 
 ircv3@^0.8.8:
   version "0.8.8"
@@ -2808,12 +2808,6 @@ rx-lite-aggregates@^4.0.8:
 rx-lite@*, rx-lite@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
-
-rxjs@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.2.1.tgz#246cebec189a6cbc143a3ef9f62d6f4c91813ca1"
-  dependencies:
-    tslib "^1.9.0"
 
 rxjs@^6.2.2:
   version "6.2.2"
