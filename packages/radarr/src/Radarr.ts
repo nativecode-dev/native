@@ -1,7 +1,7 @@
 import { HTTP } from '@nofrills/http'
 import { URL } from 'url'
 
-import { Calendar, Movie, MovieQuality, Status, ReleaseInfo } from './models'
+import { Calendar, Command, CommandInfo, Movie, MovieQuality, Status, ReleaseInfo } from './models'
 import { Logger } from './Logger'
 
 export class Radarr extends HTTP {
@@ -18,6 +18,18 @@ export class Radarr extends HTTP {
 
   public calendar(): Promise<Calendar[]> {
     return this.get<Calendar[]>(`${this.endpoint.toString()}/calendar`)
+  }
+
+  public command(id: string): Promise<Command> {
+    return this.get<Command>(`${this.endpoint.toString()}/command/${id}`)
+  }
+
+  public commands(): Promise<Command[]> {
+    return this.get<Command[]>(`${this.endpoint.toString()}/command`)
+  }
+
+  public exec(command: string): Promise<CommandInfo> {
+    return this.post<string, CommandInfo>(`${this.endpoint.toString()}/command`, command)
   }
 
   public movie(movieId: number): Promise<Movie> {

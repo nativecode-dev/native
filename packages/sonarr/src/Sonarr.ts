@@ -1,7 +1,7 @@
 import { HTTP } from '@nofrills/http'
 import { URL } from 'url'
 
-import { Calendar, Episode, QualityProfile, ReleaseInfo, Series } from './models'
+import { Calendar, Command, Episode, QualityProfile, ReleaseInfo, Series } from './models'
 import { Logger } from './Logger'
 
 export class Sonarr extends HTTP {
@@ -18,6 +18,14 @@ export class Sonarr extends HTTP {
 
   public calendar(): Promise<Calendar[]> {
     return this.get<Calendar[]>(`${this.endpoint.toString()}/calendar`)
+  }
+
+  public command(id: string): Promise<Command> {
+    return this.get<Command>(`${this.endpoint.toString()}/command/${id}`)
+  }
+
+  public commands(): Promise<Command[]> {
+    return this.get<Command[]>(`${this.endpoint.toString()}/command`)
   }
 
   public episodes(seriesId?: number): Promise<Episode[]> {

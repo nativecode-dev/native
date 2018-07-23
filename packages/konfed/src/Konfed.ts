@@ -3,9 +3,9 @@ import { URL } from 'url'
 import { Logger } from './Logger'
 
 export class Konfed {
-  private readonly log = Logger
+  private readonly logger = Logger
 
   constructor(couchbase: URL) {
-    this.log.debug('couchbase', couchbase.toString())
+    this.logger.debug('couchbase', couchbase.toString())
   }
 }
