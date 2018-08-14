@@ -1,11 +1,11 @@
 {
-  "commands": {
+  "command": {
     "exec": {
       "bail": true
     },
     "publish": {
       "allowBranch": "master",
-      "ignore": [
+      "ignoreChanges": [
         "*.md",
         "LICENSE"
       ],
@@ -13,7 +13,7 @@
       "yes": true
     },
     "run": {
-      "stream": true
+      "stream": false
     }
   },
   "loglevel": "error",
@@ -22,7 +22,7 @@
     "--quiet"
   ],
   "useWorkspaces": true,
-  "lerna": "2.11.0",
+  "lerna": "3.0.3",
   "packages": [
     "packages/*",
     "services/*"

@@ -5,14 +5,27 @@
   "author": "opensource@nativecode.com",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "lerna bootstrap ; lerna run build",
+    "prebuild": "yarn",
+    "start": "lerna run startdev",
+    "test": "cross-env DEBUG= nyc mocha --opts mocha.opts",
+    "pretest": "yarn run build",
+    "testonly": "cross-env DEBUG=native* nyc mocha --opts mocha.opts",
+    "docker": "lerna run docker",
+    "docker-push": "lerna run docker-push",
+    "push": "sh push.sh",
+    "travis-ssh": "set-up-ssh --key \"$encrypted_c428ddd815a2_key\" --iv \"$encrypted_c428ddd815a2_iv\" --path-encrypted-key \"deploy.enc\"",
+    "do": "lerna"
+  },
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
     "coveralls": "^3.0.0",
-    "lerna": "^2.11.0",
+    "lerna": "^3.0.3",
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
-    "source-map-support": "^0.5.0",
-    "ts-node": "^7.0.0",
+    "source-map-support": "^0.5.8",
+    "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-config-standard": "^7.0.0",
     "typescript": "^2.6.1"
@@ -37,21 +50,13 @@
     "sourceMap": true,
     "temp-directory": ".cache/nyc"
   },
-  "scripts": {
-    "build": "lerna bootstrap ; lerna run build",
-    "prebuild": "yarn",
-    "start": "lerna run startdev",
-    "test": "cross-env DEBUG= nyc mocha --opts mocha.opts",
-    "pretest": "yarn run build",
-    "testonly": "cross-env DEBUG=native* nyc mocha --opts mocha.opts",
-    "docker": "lerna run docker",
-    "docker-push": "lerna run docker-push",
-    "push": "sh push.sh",
-    "travis-ssh": "set-up-ssh --key \"$encrypted_c428ddd815a2_key\" --iv \"$encrypted_c428ddd815a2_iv\" --path-encrypted-key \"deploy.enc\"",
-    "add-pkg": "lerna add"
-  },
-  "workspaces": [
-    "packages/*",
-    "services/*"
-  ]
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "services/*"
+    ],
+    "nohoist": [
+      "@angular/cli"
+    ]
+  }
 }
