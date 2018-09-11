@@ -888,10 +888,6 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@nofrills/collections@^3.1.6-13":
-  version "3.1.6-13"
-  resolved "https://registry.yarnpkg.com/@nofrills/collections/-/collections-3.1.6-13.tgz#e238e15f912038218fb940dda451caac9844ffbd"
-
 "@nofrills/collections@^3.2.0":
   version "3.7.0"
   resolved "https://registry.npmjs.org/@nofrills/collections/-/collections-3.7.0.tgz#fefc2d07f29060e9c5b963c865541a4d69198c22"
@@ -922,28 +918,13 @@
     "@nofrills/scrubs" "^3.2.0"
     isomorphic-fetch "^2.2.1"
 
-"@nofrills/lincoln-debug@^3.1.6-14":
-  version "3.1.6-14"
-  resolved "https://registry.yarnpkg.com/@nofrills/lincoln-debug/-/lincoln-debug-3.1.6-14.tgz#89eb8d6a3ac1e167f532ebdd6a2efd6ef7f71cce"
-  dependencies:
-    "@nofrills/collections" "^3.1.6-13"
-    "@nofrills/lincoln" "^3.1.6-14"
-    debug "^3.1.0"
-
-"@nofrills/lincoln-debug@^3.2.0", "@nofrills/lincoln-debug@^3.3.1", "@nofrills/lincoln-debug@^3.4.0":
+"@nofrills/lincoln-debug@^3.1.6-14", "@nofrills/lincoln-debug@^3.2.0", "@nofrills/lincoln-debug@^3.3.1", "@nofrills/lincoln-debug@^3.4.0":
   version "3.4.0"
   resolved "https://registry.npmjs.org/@nofrills/lincoln-debug/-/lincoln-debug-3.4.0.tgz#194b446129f5ccc9625683ff7d7cfced313612d8"
   dependencies:
     "@nofrills/collections" "^3.2.0"
     "@nofrills/lincoln" "^3.2.0"
     debug "^3.1.0"
-
-"@nofrills/lincoln@^3.1.6-14":
-  version "3.1.6-14"
-  resolved "https://registry.yarnpkg.com/@nofrills/lincoln/-/lincoln-3.1.6-14.tgz#bb9c4f1f79379b859cd8a4074ff9e3ad0874ff83"
-  dependencies:
-    "@nofrills/collections" "^3.1.6-13"
-    uuidjs "^4.0.3"
 
 "@nofrills/lincoln@^3.2.0":
   version "3.4.0"
@@ -1018,17 +999,9 @@
   version "10.5.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.1.tgz#d578446f4abff5c0b49ade9b4e5274f6badaadfc"
 
-"@types/node@^10.5.8":
-  version "10.5.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.8.tgz#6f14ccecad1d19332f063a6a764f8907801fece0"
-
 "@types/node@^6.0.46":
   version "6.0.117"
   resolved "https://registry.npmjs.org/@types/node/-/node-6.0.117.tgz#ccfc2506001404708528d657aad9c1b931111646"
-
-"@types/node@~8.9.4":
-  version "8.9.5"
-  resolved "http://registry.npmjs.org/@types/node/-/node-8.9.5.tgz#162b864bc70be077e6db212b322754917929e976"
 
 "@types/q@^0.0.32":
   version "0.0.32"
@@ -1664,10 +1637,6 @@ better-assert@~1.0.0:
 big.js@^3.1.3:
   version "3.2.0"
   resolved "https://registry.npmjs.org/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
-
-bin-shebang@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/bin-shebang/-/bin-shebang-1.0.11.tgz#296dd2b8229518f35db1a0aeaf663b0454b350c6"
 
 binary-extensions@^1.0.0:
   version "1.11.0"
@@ -7153,13 +7122,13 @@ rxjs@^5.5.2:
   dependencies:
     symbol-observable "1.0.1"
 
-rxjs@^6.0.0, rxjs@^6.3.2:
+rxjs@^6.0.0, rxjs@^6.2.2, rxjs@^6.3.2:
   version "6.3.2"
   resolved "https://registry.npmjs.org/rxjs/-/rxjs-6.3.2.tgz#6a688b16c4e6e980e62ea805ec30648e1c60907f"
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.2.2, rxjs@~6.2.0:
+rxjs@~6.2.0:
   version "6.2.2"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.2.2.tgz#eb75fa3c186ff5289907d06483a77884586e1cf9"
   dependencies:
@@ -8190,11 +8159,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-"typescript@>=2.6.2 <2.8", typescript@~2.7.2:
+"typescript@>=2.6.2 <2.8", typescript@~2.7.0:
   version "2.7.2"
   resolved "http://registry.npmjs.org/typescript/-/typescript-2.7.2.tgz#2d615a1ef4aee4f574425cdff7026edf81919836"
 
-typescript@^2.6.1, typescript@^2.9.2, typescript@~2.9.2:
+typescript@~2.9.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 

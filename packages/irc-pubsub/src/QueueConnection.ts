@@ -2,11 +2,11 @@ import { URL } from 'url'
 import { Connection } from 'amqp-ts'
 import { Subject } from 'rxjs'
 
-import { Logger } from './Logger'
+import { Lincoln, Logger } from './Logger'
 
 export abstract class QueueConnection<T> extends Subject<T> {
   protected readonly connection: Connection
-  protected readonly logger = Logger.extend('queue')
+  protected readonly logger: Lincoln = Logger.extend('queue')
 
   constructor(url: URL) {
     super()

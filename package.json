@@ -16,7 +16,7 @@
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "~2.9.2"
+    "typescript": "~2.7.0"
   },
   "nyc": {
     "all": true,
@@ -39,16 +39,13 @@
     "temp-directory": ".cache/nyc"
   },
   "scripts": {
-    "build": "lerna run build",
-    "start": "lerna run startdev",
-    "test": "cross-env DEBUG= nyc mocha --opts mocha.opts",
-    "pretest": "yarn run build",
-    "testonly": "cross-env DEBUG=native* nyc mocha --opts mocha.opts",
-    "docker": "lerna run docker",
-    "docker-push": "lerna run docker-push",
+    "build": "cli-tasks build",
+    "start": "cli-tasks start",
+    "test": "cli-tasks test",
+    "docker:build": "cli-tasks docker:build",
+    "docker:push": "cli-tasks docker:push",
     "push": "sh push.sh",
-    "travis-ssh": "set-up-ssh --key \"$encrypted_c428ddd815a2_key\" --iv \"$encrypted_c428ddd815a2_iv\" --path-encrypted-key \"deploy.enc\"",
-    "do": "lerna"
+    "travis-ssh": "cli-tasks configure"
   },
   "tasks": {
     "build": [
@@ -61,11 +58,17 @@
     "clean": [
       "rimraf .cache"
     ],
-    "docker": [
+    "docker:build": [
       "lerna run docker"
     ],
     "docker:push": [
       "lerna run docker-push"
+    ],
+    "start": [
+      "lerna run start"
+    ],
+    "start:dev": [
+      "lerna run start:dev"
     ],
     "test": [
       "[build]",
@@ -73,13 +76,14 @@
     ]
   },
   "workspaces": {
+    "nohoist": [
+      "**/codelyzer",
+      "**/codelyzer/*"
+    ],
     "packages": [
       "interfaces/*",
       "packages/*",
       "services/*"
-    ],
-    "nohoist": [
-      "@angular/cli"
     ]
   }
 }

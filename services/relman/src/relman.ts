@@ -1,23 +1,20 @@
-import { CLI, ConsoleOptions } from '@nofrills/console'
-import { IrcQueueConsumer } from '@ncpub/irc-pubsub'
 import { URL } from 'url'
-
-async function initialize() {
-  const url = new URL(process.env['URL_QUEUE'] || 'amqp://localhost')
-  const consumer = new IrcQueueConsumer(url)
-  consumer.subscribe(envelope => {
-    envelope.message.nack()
-  })
-}
+import { IrcQueueConsumer } from '@ncpub/irc-pubsub'
+import { CLI, ConsoleOptions, ProcessArgs } from '@nofrills/console'
 
 async function main() {
   const options: ConsoleOptions = {
-    initializer: initialize
+    initializer: async () => {
+      const url = new URL(process.env['URL_QUEUE'] || 'amqp://localhost')
+      const consumer = new IrcQueueConsumer(url)
+      consumer.subscribe(envelope => {
+        envelope.message.nack()
+      })
+    },
   }
 
-  const exe = process.argv[0]
-  const args = process.argv.splice(1)
-  const console = new CLI<ConsoleOptions>(options, exe, args)
+  const args = ProcessArgs.from(process.argv)
+  const console = CLI.create<ConsoleOptions>(options, args.exe, ...args.args)
 
   await console.start()
 }

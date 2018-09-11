@@ -5,18 +5,6 @@
   "types": "./lib/index.d.ts",
   "author": "opensource@nativecode.com",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nativecode-dev/native.git"
-  },
-  "scripts": {
-    "build": "tsc --project tsconfig.build.json",
-    "prebuild": "yarn run clean",
-    "clean": "rimraf lib"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "@nofrills/lincoln-debug": "^3.4.0",
     "amqp-ts": "^1.4.0",
@@ -28,6 +16,26 @@
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "typescript": "~2.9.2"
+    "typescript": "~2.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nativecode-dev/native.git"
+  },
+  "scripts": {
+    "build": "cli-tasks build",
+    "clean": "cli-tasks clean"
+  },
+  "tasks": {
+    "build": [
+      "[clean]",
+      "tsc --project tsconfig.build.json"
+    ],
+    "clean": [
+      "rimraf lib"
+    ]
   }
 }

@@ -1,25 +1,13 @@
 {
-  "name": "@ncpub/ircman",
-  "version": "0.2.28-1",
-  "main": "bin/CLI.js",
-  "bin": "bin/CLI.js",
   "author": "opensource@nativecode.com",
+  "main": "./bin/CLI.js",
+  "name": "@ncpub/ircman",
   "license": "MIT",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nativecode-dev/native.git"
-  },
-  "scripts": {
-    "build": "tsc --project tsconfig.build.json",
-    "prebuild": "yarn run clean",
-    "postbuild": "bin-shebang",
-    "clean": "rimraf bin",
-    "start": "node bin/CLI.js",
-    "startdev": "ts-node src/CLI.ts",
-    "docker": "docker build --rm -t nativecode/ircman:latest .",
-    "docker-push": "docker push nativecode/ircman:latest",
-    "predocker-push": "yarn run docker"
+  "types": "./bin/CLI.d.ts",
+  "version": "0.2.28-1",
+  "bin": {
+    "cli-ircman": "./bin/CLI.js"
   },
   "dependencies": {
     "@ncpub/irc-pubsub": "^0.2.28-1",
@@ -30,11 +18,43 @@
   },
   "devDependencies": {
     "@types/node": "*",
-    "bin-shebang": "^1.0.11",
-    "cross-env": "^5.2.0",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
-    "typescript": "~2.9.2"
+    "typescript": "~2.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nativecode-dev/native.git"
+  },
+  "scripts": {
+    "build": "cli-tasks build",
+    "clean": "cli-tasks clean",
+    "start": "cli-tasks start",
+    "startdev": "cli-tasks start:dev",
+    "docker": "cli-tasks docker:build",
+    "docker-push": "cli-tasks docker:push"
+  },
+  "tasks": {
+    "build": [
+      "[clean]",
+      "tsc --project tsconfig.build.json",
+      "cli-shabang"
+    ],
+    "clean": [
+      "rimraf bin"
+    ],
+    "docker:build": [
+      "docker build --rm -t nativecode/ircman:latest ."
+    ],
+    "docker:push": [
+      "[docker:build]",
+      "docker push nativecode/ircman:latest"
+    ],
+    "start": [
+      "node bin/CLI.js"
+    ],
+    "start:dev": [
+      "ts-node src/CLI.ts"
+    ]
   }
 }

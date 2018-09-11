@@ -38,7 +38,7 @@
     "rimraf": "^2.6.2",
     "ts-node": "~7.0.1",
     "tslint": "~5.11.0",
-    "typescript": "~2.9.2"
+    "typescript": "~2.7.0"
   },
   "repository": {
     "type": "git",
@@ -54,7 +54,7 @@
   "tasks": {
     "build": [
       "[clean]",
-      "ng build --prod"
+      "ng build"
     ],
     "clean": [
       "rimraf dist"
