@@ -659,9 +659,9 @@
     "@nofrills/types" "^3.2.0"
     deepmerge "^2.1.1"
 
-"@nofrills/tasks@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/@nofrills/tasks/-/tasks-2.0.1.tgz#30ba2b77dc907d6e3edcee1abcca437d1ba989da"
+"@nofrills/tasks@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/@nofrills/tasks/-/tasks-2.1.0.tgz#8cc698000c0386688ddeb43b2e43df92a0eaebb0"
   dependencies:
     "@nofrills/console" "^3.3.2"
     "@nofrills/fs" "^3.4.2"
