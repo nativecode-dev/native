@@ -13,7 +13,7 @@
       "yes": true
     },
     "run": {
-      "stream": false
+      "stream": true
     }
   },
   "loglevel": "error",

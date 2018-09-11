@@ -22,12 +22,12 @@
     "tar": "^4.4.6"
   },
   "devDependencies": {
-    "@types/node": "^10.5.8",
+    "@types/node": "*",
     "@types/tar": "^4.0.0",
     "cross-env": "^5.2.0",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "typescript": "^2.9.2"
+    "typescript": "~2.9.2"
   }
 }
