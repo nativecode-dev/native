@@ -1,10 +1,10 @@
 {
-  "name": "native",
-  "version": "1.0.0",
-  "main": "index.js",
   "author": "opensource@nativecode.com",
   "license": "MIT",
+  "main": "index.js",
+  "name": "native",
   "private": true,
+  "version": "1.0.0",
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
     "@nofrills/tasks": "^2.0.1",
@@ -45,7 +45,8 @@
     "docker:build": "cli-tasks docker:build",
     "docker:push": "cli-tasks docker:push",
     "push": "sh push.sh",
-    "travis-ssh": "cli-tasks configure"
+    "travis-ssh": "cli-tasks configure",
+    "do": "lerna"
   },
   "tasks": {
     "build": [
