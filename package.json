@@ -40,13 +40,12 @@
   },
   "scripts": {
     "build": "cli-tasks build",
+    "configure": "cli-tasks configure",
     "start": "cli-tasks start",
     "test": "cli-tasks test",
     "docker:build": "cli-tasks docker:build",
     "docker:push": "cli-tasks docker:push",
-    "push": "sh push.sh",
-    "travis-ssh": "cli-tasks configure",
-    "do": "lerna"
+    "push": "sh push.sh"
   },
   "tasks": {
     "build": [
