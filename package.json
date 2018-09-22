@@ -7,7 +7,7 @@
   "version": "1.0.0",
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
-    "@nofrills/tasks": "^2.1.0",
+    "@nofrills/tasks": "^5.4.0",
     "coveralls": "^3.0.0",
     "lerna": "^3.3.0",
     "mocha": "^5.2.0",
