@@ -12,6 +12,10 @@
     "configure:ssh": [
       "yarn run ssh"
     ],
+    "coverage": [
+      "[test]",
+      "cross-env DEBUG= nyc report --reporter=text-lcov | coveralls"
+    ],
     "clean": [
       "rimraf .cache"
     ],

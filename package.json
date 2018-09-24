@@ -42,6 +42,7 @@
   "scripts": {
     "build": "cli-tasks build",
     "configure": "cli-tasks configure",
+    "coverage": "cli-tasks coverage",
     "docker:build": "cli-tasks docker:build",
     "docker:push": "cli-tasks docker:push",
     "ssh": "set-up-ssh --key \"$encrypted_c428ddd815a2_key\" --iv \"$encrypted_c428ddd815a2_iv\" --path-encrypted-key \"deploy.enc\"",
