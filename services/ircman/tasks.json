@@ -1,0 +1,25 @@
+{
+  "tasks": {
+    "build": [
+      "[clean]",
+      "tsc --project tsconfig.build.json",
+      "cli-shabang"
+    ],
+    "clean": [
+      "rimraf bin"
+    ],
+    "docker:build": [
+      "docker build --rm -t nativecode/ircman:latest ."
+    ],
+    "docker:push": [
+      "[docker:build]",
+      "docker push nativecode/ircman:latest"
+    ],
+    "start": [
+      "node bin/CLI.js"
+    ],
+    "start:dev": [
+      "ts-node src/CLI.ts"
+    ]
+  }
+}

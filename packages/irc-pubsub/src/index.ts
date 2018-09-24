@@ -5,7 +5,13 @@ export * from './TorrentLink'
 
 import { URL } from 'url'
 
-export const CreateQueueUrl = (host: string, port: number = 5672, username: string, password: string, vhost: string) => {
+export const CreateQueueUrl = (
+  host: string,
+  port: number = 5672,
+  username: string,
+  password: string,
+  vhost: string,
+) => {
   const url = new URL(`amqp://${host}`)
   url.username = username
   url.password = password

@@ -1,6 +1,6 @@
 export interface Command {
-  name: string,
-  startedOn: Date,
+  name: string
+  startedOn: Date
   stateChangeTime: Date
   sendUpdatesToClient: boolean
   state: string

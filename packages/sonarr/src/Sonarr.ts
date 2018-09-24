@@ -53,7 +53,9 @@ export class Sonarr extends HTTP {
     if (season) {
       season.monitored = toggle
       await this.update(series)
-      this.logger.info(`turned ${this.onoff(toggle)} monitoring for: "${series.title}" (${series.year}), season: ${seasonNumber}`)
+      this.logger.info(
+        `turned ${this.onoff(toggle)} monitoring for: "${series.title}" (${series.year}), season: ${seasonNumber}`,
+      )
       return
     }
 
@@ -70,7 +72,7 @@ export class Sonarr extends HTTP {
 
   public async shows(): Promise<Series[]> {
     const series = await this.get<Series[]>(`${this.endpoint.toString()}/series`)
-    return series.sort((a, b) => a.sortTitle < b.sortTitle ? -1 : 1)
+    return series.sort((a, b) => (a.sortTitle < b.sortTitle ? -1 : 1))
   }
 
   public update(series: Series): Promise<void> {
@@ -85,7 +87,7 @@ export class Sonarr extends HTTP {
     const init = {
       body: JSON.stringify(body),
       headers: {
-        'accept': 'application/json,text/json',
+        accept: 'application/json,text/json',
         'content-type': 'application/json',
         'x-api-key': this.baseUrl.password,
       },

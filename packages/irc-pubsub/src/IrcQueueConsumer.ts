@@ -17,10 +17,14 @@ export class IrcQueueConsumer extends QueueConnection<Envelope> {
     super(url)
 
     const name = url.pathname.substr(1)
-    this.exchange = this.connection.declareExchange(name, 'fanout', { durable: true })
+    this.exchange = this.connection.declareExchange(name, 'fanout', {
+      durable: true,
+    })
     this.queue = this.connection.declareQueue(name, { durable: true })
     this.queue.bind(this.exchange)
-    this.queue.activateConsumer(this.dequeue, { consumerTag: `${process.pid}:${process.getuid()}` })
+    this.queue.activateConsumer(this.dequeue, {
+      consumerTag: `${process.pid}:${process.getuid()}`,
+    })
   }
 
   private dequeue = (message: Message) => {

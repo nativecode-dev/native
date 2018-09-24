@@ -17,19 +17,19 @@ jobs:
         - git remote set-url origin git@github.com:nativecode-dev/native.git
         - git checkout $TRAVIS_BRANCH
         - npm set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-        - yarn run test
+        - cli-tasks test
       after_success:
         - yarn run push
 after_failure:
   - cat lerna-debug.log
 after_success:
-  - yarn run travis-coveralls
+  - yarn run coveralls
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s
   - export PATH="$HOME/.yarn/bin:$PATH"
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - npx lerna bootstrap
-  - yarn run configure
+  - yarn install
+  - yarn test
 env:
   global:
   - secure: j9qGqAIT1k6sANqJku9+lv0M/IDbfTmz5D4UyJuRzdeA6wwTDo18w4lSpyLVsaKnXXDtJFRVBRgRQ2KsKUMvrCjYQYVSOStpXgU1ekc2f+P589AFIC+xs2Jp/em49yLnhF4fZFnsDvJKYI2E7c+YUiT/wa9VYiUFaH96z2BkgVIw1PupJqeXfsyLs38EALhz5DzQRu2U8MOA6rJ2Ymo/GLIlmtiZThbBQ9m6DEPp9hYOy0MhzS0KlO1NOkHW/+ddPXBBZwVokpGLYG20MHJ9KdX6Pvubm1dr8dtz7A2R3wIjI3Vt54eXmCfkSqDeRuRJovFCsy8lf6bJrN8jmL50VYrtHvYbXI5dmHvCBxwOt/0AbtQjkM+Qd3qiJn1ndgji/sgnsqx1LB5kb8JjeiYKvpmsHD9Q/nfbQJ2cY9olFclHdAvbIF3a+6wofZlCXHvCGtnXDutXCabY7tkHaQZ5TDGGvnYML7K+FhitpTlizjptMXPaHHYHtXAzVWgGT1jUW8FdTeWKRzmnRyLodKWpQlR5uwpp3IdMuArEhNCxF/qFezkc8qrwmAffmRXoR+RN8a65HV4nka2B/UBaAWvEwnD9RlxwzvStpcKM4cbQvRqMuxsENMJ+r99DK3S5gLDAI5Yfsl7OY3qKAE1Mcm4x7Px8st4x0rtHnsbDs9fifsM=

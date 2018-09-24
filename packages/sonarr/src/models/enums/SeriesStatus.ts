@@ -1,4 +1,4 @@
 export enum SeriesStatus {
   Continuing = 'continuing',
-  Ended = 'ended'
+  Ended = 'ended',
 }

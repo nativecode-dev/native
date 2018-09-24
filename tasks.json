@@ -1,0 +1,41 @@
+{
+  "tasks": {
+    "build": [
+      "[clean]",
+      "[format]",
+      "[lint]",
+      "lerna run build"
+    ],
+    "configure": [
+      "[configure:ssh]"
+    ],
+    "configure:ssh": [
+      "yarn run ssh"
+    ],
+    "clean": [
+      "rimraf .cache"
+    ],
+    "docker:build": [
+      "lerna run docker"
+    ],
+    "docker:push": [
+      "lerna run docker-push"
+    ],
+    "format": [
+      "prettier --write \"**/src/**/*.ts\""
+    ],
+    "lint": [
+      "tslint --project tsconfig.json --config tslint.json"
+    ],
+    "start": [
+      "lerna run start"
+    ],
+    "start:dev": [
+      "lerna run start:dev"
+    ],
+    "test": [
+      "[build]",
+      "cross-env DEBUG= nyc mocha --opts mocha.opts"
+    ]
+  }
+}

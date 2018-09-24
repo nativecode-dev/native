@@ -14,7 +14,7 @@ async function main() {
   }
 
   const args = ProcessArgs.from(process.argv)
-  const console = CLI.create<ConsoleOptions>(options, args.exe, ...args.args)
+  const console = CLI.create<ConsoleOptions>(options, args)
 
   await console.start()
 }

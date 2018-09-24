@@ -6,12 +6,12 @@
   "author": "opensource@nativecode.com",
   "license": "MIT",
   "dependencies": {
-    "@nofrills/lincoln-debug": "^3.4.0",
+    "@nofrills/lincoln-debug": "^3.6.5",
     "amqp-ts": "^1.4.0",
     "rxjs": "^6.3.2"
   },
   "devDependencies": {
-    "@types/node": "*",
+    "@types/node": "10.10.3",
     "cross-env": "^5.2.0",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.1",
@@ -28,14 +28,5 @@
   "scripts": {
     "build": "cli-tasks build",
     "clean": "cli-tasks clean"
-  },
-  "tasks": {
-    "build": [
-      "[clean]",
-      "tsc --project tsconfig.build.json"
-    ],
-    "clean": [
-      "rimraf lib"
-    ]
   }
 }

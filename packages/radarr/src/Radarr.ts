@@ -75,7 +75,7 @@ export class Radarr extends HTTP {
     return {
       body: JSON.stringify(body),
       headers: {
-        'accept': 'application/json,text/json',
+        accept: 'application/json,text/json',
         'content-type': 'application/json',
         'x-api-key': this.baseUrl.password,
       },

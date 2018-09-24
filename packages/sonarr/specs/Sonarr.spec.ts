@@ -15,5 +15,4 @@ describe('when using the Sonarr client', () => {
     const shows = await sonarr.shows()
     expect(shows.length).gt(0)
   }).timeout(TIMEOUT)
-
 })

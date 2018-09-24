@@ -3,11 +3,11 @@ import { MovieFile } from './MovieFile'
 import { MovieTitle } from './MovieTitle'
 
 export enum MovieStatus {
-  Released = 'released'
+  Released = 'released',
 }
 
 export enum PathState {
-  Static = 'static'
+  Static = 'static',
 }
 
 export interface Movie {

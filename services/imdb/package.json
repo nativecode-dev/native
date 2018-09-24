@@ -6,13 +6,13 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@nofrills/lincoln-debug": "^3.1.6-14",
+    "@nofrills/lincoln-debug": "^3.6.5",
     "gunzip-maybe": "^1.4.1",
     "rxjs": "^6.2.2",
     "tar": "^4.4.6"
   },
   "devDependencies": {
-    "@types/node": "*",
+    "@types/node": "10.10.3",
     "@types/tar": "^4.0.0",
     "cross-env": "^5.2.0",
     "rimraf": "^2.6.2",
@@ -27,17 +27,5 @@
   "scripts": {
     "build": "cli-tasks build",
     "clean": "cli-tasks clean"
-  },
-  "tasks": {
-    "build": [
-      "[clean]",
-      "tsc --project tsconfig.build.json"
-    ],
-    "clean": [
-      "rimraf bin"
-    ],
-    "start": [
-      "ts-node src/CLI.ts"
-    ]
   }
 }

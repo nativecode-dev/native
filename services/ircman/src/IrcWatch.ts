@@ -15,11 +15,7 @@ export class IrcWatch {
 
   private retries: number = 0
 
-  constructor(
-    private readonly queue: IrcQueue,
-    private readonly url: URL,
-    private readonly retryCount?: number
-  ) {
+  constructor(private readonly queue: IrcQueue, private readonly url: URL, private readonly retryCount?: number) {
     const connection: ConnectionInfo = {
       hostName: url.hostname,
       nick: url.username,
@@ -72,10 +68,8 @@ export class IrcWatch {
     const timeout = this.retries * this.retryCount * 1000
 
     setTimeout(async () => {
-
       this.logger.debug(`reconnecting, waiting ${timeout / 1000} seconds...`)
       await this.client.reconnect()
-
     }, timeout)
   }
 
@@ -97,7 +91,6 @@ export class IrcWatch {
 
         this.logger.debug('privmsg', link)
         this.queue.enqueue(link as TorrentLink)
-
       } catch (error) {
         this.logger.error(error, text, target, user)
       }

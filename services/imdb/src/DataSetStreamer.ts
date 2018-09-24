@@ -11,7 +11,12 @@ export abstract class DataSetStreamer<T> {
       .pipe(zlib.createGunzip())
       .on('error', (error: any) => subject.error(error))
       .on('end', () => subject.complete())
-      .on('data', (data: Buffer) => data.toString().split('\n').forEach(line => this.parse(subject, line)))
+      .on('data', (data: Buffer) =>
+        data
+          .toString()
+          .split('\n')
+          .forEach(line => this.parse(subject, line)),
+      )
 
     return subject
   }

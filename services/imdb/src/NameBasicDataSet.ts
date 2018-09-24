@@ -16,8 +16,8 @@ export class NameBasicDataSet extends DataSetStreamer<NameBasic> {
     subject.next({
       nconst: values[0],
       primaryName: values[1],
-      birthYear: parseInt(values[2]),
-      deathYear: values[3] === '\N' ? undefined : parseInt(values[3]),
+      birthYear: parseInt(values[2], undefined),
+      deathYear: values[3] === 'N' ? undefined : parseInt(values[3], undefined),
       primaryProfession: values[4],
       knownForTitles: values[5] ? values[5].split(',') : [],
     })

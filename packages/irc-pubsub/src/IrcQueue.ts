@@ -11,7 +11,9 @@ export class IrcQueue extends QueueConnection<TorrentLink> {
     super(url)
 
     const name = url.pathname.substr(1)
-    this.exchange = this.connection.declareExchange(name, 'fanout', { durable: true })
+    this.exchange = this.connection.declareExchange(name, 'fanout', {
+      durable: true,
+    })
   }
 
   enqueue(link: TorrentLink) {
@@ -21,4 +23,3 @@ export class IrcQueue extends QueueConnection<TorrentLink> {
     this.next(link)
   }
 }
-
